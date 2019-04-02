@@ -28,7 +28,17 @@
 
     .buttons {
       display: flex;
+      visibility: hidden;
       justify-content: space-between;
+    }
+  }
+
+  &:hover {
+    .photo .buttons {
+      visibility: visible;
+    }
+    .price .btn-main-small {
+      background-color: orange;
     }
   }
 
