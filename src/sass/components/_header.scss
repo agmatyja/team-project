@@ -74,7 +74,7 @@ header {
 
         .cart-icon {
           background-color: $primary;
-          width: 55px;
+          width: 70px;
           height: 50px;
           border-radius: 3px;
           display: flex;
@@ -89,7 +89,9 @@ header {
         }
 
         .cart-counter {
-          width: 28px;
+          min-width: 28px;
+          max-width: 50px;
+          padding: 0 2px;
           height: 27px;
           border-radius: 14px;
           background-color: $header-bg;
