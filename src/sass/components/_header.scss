@@ -172,8 +172,11 @@ header {
         align-items: center;
         position: relative;
 
-        i:first-child {
+        &:hover i:first-child {
           color: $primary;
+        }
+
+        i:first-child {
           position: absolute;
           left: 10px;
           z-index: 0;
