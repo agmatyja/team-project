@@ -94,5 +94,17 @@
       color: $white;
       border-color: $primary;
     }
+    
+    .price-old {
+      display: block;
+      .btn-main-small {
+        text-decoration-line: line-through;
+        text-decoration-color: white;
+      }
+    }
+
+    .no-exist {
+      display: none;
+    }
   }
 }
