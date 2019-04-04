@@ -97,9 +97,15 @@
     
     .price-old {
       display: block;
-      .btn-main-small {
+
+      .text-main-small {
+        @extend .btn-main-small;
+        font-size: 16px;
+        font-weight: 200;
+        color: $text-color-light;
+        background-color: transparent;
         text-decoration-line: line-through;
-        text-decoration-color: white;
+        text-decoration-color: $text-color;
       }
     }
 
