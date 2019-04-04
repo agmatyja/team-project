@@ -222,3 +222,52 @@ header {
     }
   }
 }
+
+@media (max-width: 767px) {
+  .top-bar {
+    .text-right ul li {
+      a {
+        visibility: hidden;
+      }
+      i {
+        margin: 0 -8px;
+        visibility: visible;
+      }
+    }
+  }
+
+  .company-claim {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .phone-number {
+      order: 3;
+      align-self: center;
+      margin-top: 20px;
+      margin-left: -150px;
+      margin-bottom: -50px;
+      p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 14px;
+        color: rgb(216, 216, 216);
+        font-weight: 500;
+        i {
+          font-size: 32px;
+          margin-top: -3px;
+          margin-right: 0.8rem;
+        }
+      }
+    }
+
+    .cart {
+      align-self: flex-start;
+      order: 2;
+      margin-top: 35px;
+    }
+  }
+}
