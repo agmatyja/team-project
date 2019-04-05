@@ -172,8 +172,16 @@ header {
         align-items: center;
         position: relative;
 
-        &:hover i:first-child {
-          color: $primary;
+        &:hover {
+          background: $primary;
+          & i:first-child,
+          i:last-child,
+          select {
+            color: $text-color-hover;
+            option {
+              color: $form-border-color;
+            }
+          }
         }
 
         i:first-child {
