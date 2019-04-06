@@ -174,10 +174,12 @@ header {
 
         &:hover {
           background: $primary;
-          & i:first-child,
+
+          i:first-child,
           i:last-child,
           select {
             color: $text-color-hover;
+
             option {
               color: $form-border-color;
             }
