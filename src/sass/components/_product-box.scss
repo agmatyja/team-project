@@ -55,6 +55,10 @@
     }
 
     .stars {
+      .active {
+        color: $primary;
+      }
+
       a {
         text-decoration: none;
         color: rgb(42, 42, 42);
