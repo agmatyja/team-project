@@ -54,7 +54,6 @@ selectCategory.addEventListener('click', function (event) {
   }
 });
 
-<<<<<<< HEAD
 const brandPrev = document.querySelector('.section--brand .fa-chevron-left');
 const brandNext = document.querySelector('.section--brand .fa-chevron-right');
 const brand = document.querySelector('.section--brand .photos');
@@ -227,7 +226,7 @@ swipedetect(brand, function (swipedir) {
     brandMoveRight(countItem);
   }
 });
-=======
+
 const productBoxStars = document.querySelectorAll('.product-box .stars');
 for (let k = 0; k < productBoxStars.length; k++) {
   let memory;
@@ -268,4 +267,4 @@ for (let k = 0; k < productBoxStars.length; k++) {
     });
   }
 }
->>>>>>> WDP190404-19 Add stars animation - opinion
+
