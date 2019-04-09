@@ -202,7 +202,7 @@ header {
           z-index: 0;
         }
 
-        .select {
+        .category-list {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -226,6 +226,9 @@ header {
           }
 
           ul > li {
+            display: block;
+            height: 45px;
+            line-height: 40px;
             text-align: center;
             color: $text-color;
             cursor: pointer;
@@ -256,7 +259,8 @@ header {
             }
           }
         }
-        &:hover > .select > ul {
+
+        &:hover > .category-list > ul {
           display: block;
         }
       }
