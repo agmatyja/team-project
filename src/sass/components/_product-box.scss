@@ -78,9 +78,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .active {
       background: $primary;
-      color: #fff;
+      color: $white;
       border-color: $primary;
     }
   }
