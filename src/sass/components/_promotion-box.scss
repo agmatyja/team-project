@@ -30,21 +30,21 @@
       p {
         margin: 0;
         padding: 0;
-      }
 
-      p:nth-child(1) span {
-        font-size: 16px;
-      }
+        &:nth-child(1) span {
+          font-size: 16px;
+        }
 
-      p:nth-child(2) span {
-        font-size: 24px;
-        font-weight: bold;
-      }
+        &:nth-child(2) span {
+          font-size: 24px;
+          font-weight: bold;
+        }
 
-      p:nth-child(3) span {
-        padding: 3px;
-        font-size: 20px;
-        border: 2px solid #ffffff;
+        &:nth-child(3) span {
+          padding: 3px;
+          font-size: 20px;
+          border: 2px solid #ffffff;
+        }
       }
     }
   }
