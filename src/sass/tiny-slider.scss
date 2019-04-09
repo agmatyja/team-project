@@ -71,7 +71,7 @@
   transition: opacity 0.6s;
   opacity: 0.6;
 }
-.tns-lazy-img.tns-complete {
+.tns-lazy-img.loaded {
   opacity: 1;
 }
 .tns-ah {
@@ -100,13 +100,6 @@
   opacity: 0;
   filter: alpha(opacity=0);
   z-index: -1;
-}
-.tns-vpfix {
-  white-space: nowrap;
-}
-.tns-vpfix > div,
-.tns-vpfix > li {
-  display: inline-block;
 }
 .tns-t-subp2 {
   margin: 0 auto;

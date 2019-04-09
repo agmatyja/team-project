@@ -2,15 +2,15 @@ import { tns } from './tiny-slider.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   tns({
-    items: 2,
-    controls: false,
+    items: 1,
     responsive: {
-      '350': {
-        items: 3,
-        controls: true,
-        edgePadding: 30
+      512: {
+        items: 2
       },
-      '500': {
+      768: {
+        items: 3
+      },
+      1024: {
         items: 4
       }
     },
@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     swipeAngle: false,
     speed: 400,
     mouseDrag: true,
-    slideBy: 'page'
+    navContainer: '.dots > ul'
   });
 });
