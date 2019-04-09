@@ -1,0 +1,30 @@
+.section--gallery {
+  .product-left-gallery {
+    .gallery-tabs {
+      li {
+      }
+    }
+  }
+
+  .product-right-gallery {
+    background: #e8edf7 url(../images/products/bg_right_gallery.png) no-repeat;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+
+    small {
+      text-transform: uppercase;
+    }
+
+    .price {
+      font-size: 48px;
+      color: #79ae39;
+    }
+
+    .title {
+      font-size: 48px;
+      color: #d58e32;
+      display: block;
+    }
+  }
+}
