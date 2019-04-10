@@ -1,16 +1,135 @@
 .section--gallery {
+  .panel-bar {
+    .heading {
+      width: 100%;
+    }
+  }
   .product-left-gallery {
-    .gallery-tabs {
-      li {
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      margin: 0;
+
+      .tab {
+        border: 1px #e2e2e2 solid;
+        border-right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:last-child {
+          border-right: 1px #e2e2e2 solid;
+        }
+
+        a {
+          color: #000;
+          padding: 10px 23px;
+          text-decoration: none;
+        }
+      }
+
+      .active {
+        background: #f4f5f7;
+        border-top: 3px $primary solid;
+        border-bottom: 0;
+
+        a {
+          color: $primary;
+        }
+      }
+    }
+    .gallery {
+      background: #f4f5f7;
+
+      .big-photo {
+        background: #e8edf7 url(../images/products/furniture-gallery1.jpg) no-repeat;
+        width: 100%;
+        height: 409px;
+        background-size: cover;
+      }
+
+      .thumbnails {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 6px;
+        background: $white;
+        border: 1px #e2e2e2 solid;
+        border-top: 0;
+
+        a {
+          background: #2a2a2a;
+          display: flex;
+          align-items: center;
+          padding: 0 11px;
+          color: $white;
+          text-decoration: none;
+        }
+
+        .thumbnails-list {
+          display: flex;
+          justify-content: space-between;
+          margin: 0;
+
+          .thumb-1 {
+            background: url(../images/products/furniture-gallery1.jpg) no-repeat;
+          }
+
+          .thumb-2 {
+            background: url(../images/products/furniture-gallery1.jpg) no-repeat;
+          }
+
+          .thumb-3 {
+            background: url(../images/products/furniture-gallery1.jpg) no-repeat;
+          }
+
+          .thumb-4 {
+            background: url(../images/products/furniture-gallery1.jpg) no-repeat;
+          }
+
+          .thumb-5 {
+            background: url(../images/products/furniture-gallery1.jpg) no-repeat;
+          }
+
+          .thumb-6 {
+            background: url(../images/products/furniture-gallery1.jpg) no-repeat;
+          }
+
+          .thumb {
+            width: 70px;
+            height: 70px;
+            background-size: cover;
+            margin: 0 3px;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 70px;
+              height: 70px;
+              top: 0;
+              background: rgba(255, 255, 255, 0.5);
+            }
+          }
+
+          .thumb-active {
+            &::before {
+              background: none;
+            }
+          }
+        }
       }
     }
   }
 
   .product-right-gallery {
-    background: #e8edf7 url(../images/products/bg_right_gallery.png) no-repeat;
+    background: #e8edf7 url(../images/products/bg_right_gallery.png) no-repeat bottom
+      right;
     padding: 40px;
     font-family: Arial, sans-serif;
-    background-size: cover;
+    background-size: contain;
+    height: 100%;
 
     small {
       text-transform: uppercase;
@@ -25,6 +144,11 @@
       font-size: 48px;
       color: #d58e32;
       display: block;
+    }
+
+    .btn-green {
+      margin-top: 17px;
+      display: inline-block;
     }
   }
 }
