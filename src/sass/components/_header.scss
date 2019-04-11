@@ -223,7 +223,51 @@ header {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 522px) {
+  .company-claim {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .phone-number {
+      order: 3;
+      align-self: center;
+      margin-top: 70px;
+      margin-left: -200px;
+      margin-bottom: -30px;
+      p {
+        margin: 0;
+        font-size: 5px;
+        i {
+          font-size: 5px;
+          margin-left: -50px;
+        }
+      }
+    }
+
+    .logo {
+      a {
+        img {
+          margin-top: -50px;
+          margin-right: 50px;
+        }
+      }
+    }
+
+    .cart {
+      align-self: flex-start;
+      order: 2;
+      margin-top: 30px;
+      margin-left: -120px;
+      margin-right: 50px;
+    }
+  }
+}
+
+@media (min-width: 523px) and (max-width: 767px) {
   .top-bar {
     .text-right ul li {
       a {
