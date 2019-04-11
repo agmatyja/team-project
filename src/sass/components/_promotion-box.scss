@@ -59,3 +59,8 @@
     object-fit: cover;
   }
 }
+@media (max-width: 600px) {
+  .mobile {
+    display: none;
+  }
+}
