@@ -1,0 +1,61 @@
+.promotion-box {
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  height: 300px;
+  position: relative;
+
+  .photo-main {
+    height: 300px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background: rgba(116, 114, 114, 0.5);
+    width: 80%;
+    height: 80%;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      padding-bottom: 10%;
+      padding-left: 5%;
+
+      p {
+        margin: 0;
+        padding: 0;
+
+        &:nth-child(1) span {
+          font-size: 16px;
+        }
+
+        &:nth-child(2) span {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        &:nth-child(3) span {
+          padding: 3px;
+          font-size: 20px;
+          border: 2px solid #ffffff;
+        }
+      }
+    }
+  }
+
+  .photo-second {
+    height: 150px;
+  }
+
+  img {
+    width: 100%;
+    padding-bottom: 2%;
+    object-fit: cover;
+  }
+}
