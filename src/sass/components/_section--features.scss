@@ -1,11 +1,25 @@
 .section--features {
   padding: 5rem 0;
 
-  .content {
-    a {
-      text-decoration: none;
-      &:hover {
-        color: $primary;
+  a {
+    text-decoration: none;
+
+    &:hover {
+      .feature-box {
+        .icon {
+          background-color: $primary;
+        }
+        i {
+          color: #ffffff;
+        }
+        .content {
+          h5 {
+            color: $primary;
+          }
+          p {
+            color: $primary;
+          }
+        }
       }
     }
   }
