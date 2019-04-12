@@ -2,25 +2,78 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-12 col-sm-12">
-        <div class="promotion-box">
-          <img class="photo-main" src="/images/promotion/Sofa_small.jpg" alt="Sofa" />
-          <div class="hero">
-            <div class="description">
-              <p><span>GUEST ROOM</span></p>
-              <p><span>SOFA</span></p>
-              <p><span>-20%</span></p>
+        <div class="promotion-box carousel slide" id="carousel-example-generic">
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carousel-example-generic"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <img
+                class="photo-main"
+                src="/images/promotion/Sofa_small.jpg"
+                alt="Sofa"
+              />
+            </div>
+            <div class="hero">
+              <div class="description">
+                <p><span>GUEST ROOM</span></p>
+                <p><span>SOFA</span></p>
+                <p><span>-20%</span></p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="promotion-box carousel slide" id="carousel-second">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img
+                      class="photo-second"
+                      src="/images/promotion/table_small.jpg"
+                      alt="Table"
+                    />
+                  </div>
+                </div>
+                <div class="carousel-inner">
+                  <div class="item">
+                    <img
+                      class="photo-second"
+                      src="/images/promotion/bed_small.jpg"
+                      alt="Bed"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                class="left carousel-control"
+                href="#carousel-second"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="glyphicon glyphicon-chevron-left"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only"><</span>
+              </button>
+              <button
+                class="right carousel-control"
+                href="#carousel-second"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="glyphicon glyphicon-chevron-right"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">></span>
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <div class="promotion-box">
-          <img
-            class="photo-second"
-            src="/images/promotion/table_small.jpg"
-            alt="Table"
-          />
-          <img class="photo-second" src="/images/promotion/bed_small.jpg" alt="Bed" />
         </div>
       </div>
     </div>
