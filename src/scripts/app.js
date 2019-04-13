@@ -30,6 +30,10 @@ selectCategory.addEventListener('click', function (event) {
   }
 });
 
+const brandPrev = document.querySelector('.section--brand .fa-chevron-left');
+const brandNext = document.querySelector('.section--brand .fa-chevron-right');
+const brand = document.querySelector('.section--brand .photos');
+
 let brandCount = function () {
   const width = window.outerWidth;
   if (width <= 400) {
@@ -49,14 +53,12 @@ let brandCount = function () {
 
 let brandShow = function () {
   let countItem = brandCount();
-  const brand = document.querySelector('.section--brand .photos');
   for (let i = 0; i < brand.children.length && i < countItem; i++) {
     brand.children[i].classList.add('active');
   }
 };
 
 let brandReset = function () {
-  const brand = document.querySelector('.section--brand .photos');
   for (let i = 0; i < brand.children.length; i++) {
     brand.children[i].classList.remove('active');
   }
@@ -71,10 +73,6 @@ window.addEventListener('resize', function () {
   brandReset();
   brandShow();
 });
-
-const brandPrev = document.querySelector('.section--brand .fa-chevron-left');
-const brandNext = document.querySelector('.section--brand .fa-chevron-right');
-const brand = document.querySelector('.section--brand .photos');
 
 let brandMoveLeft = function (items) {
   for (let k = 0; k < items; k++) {
@@ -118,12 +116,83 @@ let brandMoveRight = function (items) {
 
 brandPrev.addEventListener('click', function () {
   let countItem = brandCount();
-  console.log(countItem);
   brandMoveLeft(countItem);
 });
 
 brandNext.addEventListener('click', function () {
   let countItem = brandCount();
-  console.log(countItem);
   brandMoveRight(countItem);
+});
+
+/// http://javascriptkit.com/javatutors/touchevents2.shtml
+function swipedetect (el, callback) {
+  let touchsurface = el;
+  let swipedir;
+  let startX;
+  let startY;
+  let distX;
+  let distY;
+  let threshold = 150;
+  // required min distance traveled to be considered swipe
+  let restraint = 100;
+  // maximum distance allowed at the same time in perpendicular direction
+  let allowedTime = 300;
+  // maximum time allowed to travel that distance
+  let elapsedTime;
+  let startTime;
+  let handleswipe = callback || function (swipedir) {};
+  touchsurface.addEventListener(
+    'touchstart',
+    function (e) {
+      let touchobj = e.changedTouches[0];
+      swipedir = 'none';
+      startX = touchobj.pageX;
+      startY = touchobj.pageY;
+      startTime = new Date().getTime(); // record time when finger first makes contact with surface
+      e.preventDefault();
+    },
+    false
+  );
+
+  touchsurface.addEventListener(
+    'touchmove',
+    function (e) {
+      e.preventDefault(); // prevent scrolling when inside DIV
+    },
+    false
+  );
+
+  touchsurface.addEventListener(
+    'touchend',
+    function (e) {
+      let touchobj = e.changedTouches[0];
+      distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
+      distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
+      elapsedTime = new Date().getTime() - startTime; // get time elapsed
+      if (elapsedTime <= allowedTime) {
+        // first condition for awipe met
+        if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+          // 2nd condition for horizontal swipe met
+          swipedir = distX < 0 ? 'left' : 'right'; // if dist traveled is negative, it indicates left swipe
+        } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) {
+          // 2nd condition for vertical swipe met
+          swipedir = distY < 0 ? 'up' : 'down'; // if dist traveled is negative, it indicates up swipe
+        }
+      }
+      handleswipe(swipedir);
+      e.preventDefault();
+    },
+    false
+  );
+}
+
+swipedetect(brand, function (swipedir) {
+  if (swipedir === 'left') {
+    let countItem = brandCount();
+    brandMoveLeft(countItem);
+  }
+  if (swipedir === 'right') {
+    let countItem = brandCount();
+    brandMoveRight(countItem);
+  }
 });
