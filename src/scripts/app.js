@@ -6,6 +6,48 @@ selectCategory.addEventListener('click', function (event) {
   }
 });
 
+let brandCount = function () {
+  const width = window.outerWidth;
+  if (width <= 400) {
+    return 1;
+  } else if (width <= 600) {
+    return 2;
+  } else if (width <= 768) {
+    return 3;
+  } else if (width <= 990) {
+    return 4;
+  } else if (width <= 1000) {
+    return 5;
+  } else if (width > 1000) {
+    return 6;
+  }
+};
+
+let brandShow = function () {
+  let countItem = brandCount();
+  const brand = document.querySelector('.section--brand .photos');
+  for (let i = 0; i < brand.children.length && i < countItem; i++) {
+    brand.children[i].classList.add('active');
+  }
+};
+
+let brandReset = function () {
+  const brand = document.querySelector('.section--brand .photos');
+  for (let i = 0; i < brand.children.length; i++) {
+    brand.children[i].classList.remove('active');
+  }
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  brandReset();
+  brandShow();
+});
+
+window.addEventListener('resize', function () {
+  brandReset();
+  brandShow();
+});
+
 const brandPrev = document.querySelector('.section--brand .fa-chevron-left');
 const brandNext = document.querySelector('.section--brand .fa-chevron-right');
 const brand = document.querySelector('.section--brand .photos');
@@ -51,9 +93,13 @@ let brandMoveRight = function (items) {
 };
 
 brandPrev.addEventListener('click', function () {
-  brandMoveLeft(6);
+  let countItem = brandCount();
+  console.log(countItem);
+  brandMoveLeft(countItem);
 });
 
 brandNext.addEventListener('click', function () {
-  brandMoveRight(6);
+  let countItem = brandCount();
+  console.log(countItem);
+  brandMoveRight(countItem);
 });
