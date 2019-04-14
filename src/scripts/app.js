@@ -227,8 +227,11 @@ document.addEventListener('DOMContentLoaded', function () {
       brandMoveRight(countItem);
     }
   });
-  
 
+
+  const feedbackBoxParent = document.querySelector(
+    '.section--feedback .feedback-touch'
+  );
   const feedbackBox = document.querySelectorAll('.section--feedback .box-feedback');
   const feedback = document.querySelector('.section--feedback .dots ul');
   const feedbackFragment = document.createDocumentFragment();
@@ -236,7 +239,6 @@ document.addEventListener('DOMContentLoaded', function () {
   for (let i = 0; i < feedbackBox.length; i++) {
     const feedbackElement = document.createElement('li');
     const feedbackElementRef = document.createElement('a');
-
     /// feedbackElementRef.setAttribute("href", "#");
     feedbackElement.appendChild(feedbackElementRef);
     feedbackFragment.appendChild(feedbackElement);
@@ -244,6 +246,12 @@ document.addEventListener('DOMContentLoaded', function () {
   feedback.appendChild(feedbackFragment);
 
   for (let i = 0; i < feedbackBox.length; i++) {
+    if (i === 0) {
+      const link = feedback.querySelectorAll('li a');
+      feedbackBox[i].classList.add('show');
+      link[i].classList.add('active');
+    }
+
     feedback.children[i].addEventListener('click', function () {
       for (let j = 0; j < feedbackBox.length; j++) {
         const link = feedback.querySelectorAll('li a');
@@ -322,4 +330,48 @@ for (let k = 0; k < productBoxStars.length; k++) {
   }
 }
 
+  let feedbackLeft = function () {
+    for (let i = 0; i < feedbackBox.length; i++) {
+      const link = feedback.querySelectorAll('li a');
+      if (feedbackBox[i].classList.contains('show')) {
+        feedbackBox[i].classList.remove('show');
+        link[i].classList.remove('active');
+        if (i !== 0) {
+          feedbackBox[i - 1].classList.add('show');
+          link[i - 1].classList.add('active');
+        } else {
+          feedbackBox[feedbackBox.length - 1].classList.add('show');
+          link[feedbackBox.length - 1].classList.add('active');
+        }
+        break;
+      }
+    }
+  };
+
+  let feedbackRight = function () {
+    for (let i = 0; i < feedbackBox.length; i++) {
+      const link = feedback.querySelectorAll('li a');
+      if (feedbackBox[i].classList.contains('show')) {
+        feedbackBox[i].classList.remove('show');
+        link[i].classList.remove('active');
+        if (i < feedbackBox.length - 1) {
+          feedbackBox[i + 1].classList.add('show');
+          link[i + 1].classList.add('active');
+        } else {
+          feedbackBox[0].classList.add('show');
+          link[0].classList.add('active');
+        }
+        break;
+      }
+    }
+  };
+
+  swipedetect(feedbackBoxParent, function (swipedir) {
+    if (swipedir === 'left') {
+      feedbackLeft();
+    }
+    if (swipedir === 'right') {
+      feedbackRight();
+    }
+  });
 });
