@@ -5,12 +5,17 @@
     background-color: #ffffff;
     border: 1px solid #e1e1e1;
     margin-bottom: 2rem;
-    height: 500px;
+    height: 540px;
 
     .photo {
       padding: 80% 10px 0 10px;
       background: {
         repeat: no-repeat;
+      }
+      &:hover {
+        .key {
+          display: flex;
+        }
       }
       position: relative;
       overflow: hidden;
@@ -67,16 +72,19 @@
 
       .key {
         position: relative;
+        display: none;
 
         .addcart {
           position: relative;
 
           .btn-main-small {
             text-decoration: none;
-            margin-top: -100px;
+            margin-top: -150px;
             position: absolute;
             margin-left: 100px;
             margin-right: 100px;
+            width: 150px;
+            height: 30px;
             &:hover {
               display: flex;
             }
@@ -115,65 +123,90 @@
           }
         }
       }
+    }
 
-      .content {
-        text-align: center;
-        margin-top: 80px;
-        background-color: #ffffff;
-        width: 100%;
-        border: 1px solid black;
-        position: relative;
+    .content {
+      text-align: center;
+      margin-top: 80px;
+      background-color: #ffffff;
+      width: 100%;
+      height: 50px;
+      margin-bottom: 40px;
+      margin-top: 100px;
 
-        h5 {
-          color: $primary;
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: 1px;
-        }
-        .stars {
-          a {
-            text-decoration: none;
-            color: rgb(42, 42, 42);
-            @extend .far;
-            @extend .fa-star;
-            &.full {
-              @extend .fas;
-            }
+      h5 {
+        color: $primary;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+      .stars {
+        a {
+          text-decoration: none;
+          color: rgb(42, 42, 42);
+          @extend .far;
+          @extend .fa-star;
+          &.full {
+            @extend .fas;
           }
         }
+      }
+    }
 
-        .line {
-          position: absolute;
+    .line {
+      margin-top: -50px;
+      margin: 0 10px;
+      border-bottom: 1px solid #2a2a2a;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 30px;
+        border-bottom: 4px solid $primary;
+        transform: translateX(-50%);
+      }
+    }
+
+    .actions {
+      .outlines {
+        margin-top: 20px;
+        height: 50px;
+
+        .outlinebtn {
+          display: inline-block;
+          padding: 5px 10px;
+          border: 1px solid #2a2a2a;
+          color: #2a2a2a;
+          font-size: 13px;
+          line-height: 22px;
+          background-color: #ffffff;
+
+          &:hover {
+            background-color: $primary;
+            color: #ffffff;
+          }
         }
+      }
 
-        .actions {
-          .outlines {
-            .btn-outline {
-              &:hover {
-                background-color: $primary;
-                color: #ffffff;
-              }
-            }
-          }
-          .price {
-            .btn-main-small {
-              position: relative;
-              display: flex;
-              justify-content: flex-end;
-              align-content: flex-start;
-              margin-top: -35px;
-              width: 60px;
-            }
-          }
+      .price {
+        width: 80px;
+        margin-left: 250px;
+
+        .btn-main-small {
+          margin-top: -50px;
         }
       }
     }
   }
 
   .productpromo {
-    margin-top: 0 30px;
+    margin-top: -570px;
+    margin-left: 350px;
     padding-top: 15px;
-    border: 1px solid black;
+    width: 800px;
     height: 100%;
     position: relative;
     background: {
@@ -241,14 +274,21 @@
         background-color: $form-border-color;
         flex: 1;
         border: 1px solid $form-border-color;
+        height: 30px;
 
         &:hover {
           background-color: $primary;
+          border: 1px solid $primary;
         }
 
         .icon {
           i {
             color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            padding-top: 5px;
           }
         }
       }
@@ -257,6 +297,7 @@
         background-color: $primary;
         flex: 1;
         border: 1px solid $primary;
+        height: 30px;
 
         &:hover {
           background-color: $primary;
@@ -265,6 +306,11 @@
         .icon {
           i {
             color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            padding-top: 5px;
           }
         }
       }
