@@ -9,10 +9,10 @@
 
     .photo {
       padding: 80% 10px 0 10px;
-      position: relative;
       background: {
         repeat: no-repeat;
       }
+      position: relative;
       overflow: hidden;
       align-items: flex-end;
       background-image: url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
@@ -63,96 +63,107 @@
             }
           }
         }
-        .key {
-          display: none;
+      }
 
-          &:hover {
-            display: flex;
-          }
+      .key {
+        position: relative;
 
-          .addcart {
-            a {
-              width: 100px;
-              text-decoration: none;
-            }
-          }
+        .addcart {
+          position: relative;
 
-          .time {
-            margin: 0 5px;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            margin-top: -50px;
-
-            a {
-              text-decoration: none;
-              border-radius: 50%;
-              background-color: $footer-bg;
-              width: 50px;
-              height: 50px;
-
-              p {
-                position: absolute;
-                top: 0;
-                left: 0;
-                color: #fff;
-                opacity: 0;
-                font-size: 30px;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-              }
+          .btn-main-small {
+            text-decoration: none;
+            margin-top: -100px;
+            position: absolute;
+            margin-left: 100px;
+            margin-right: 100px;
+            &:hover {
+              display: flex;
             }
           }
         }
 
-        .content {
-          text-align: center;
-          padding: 20px;
-          margin-top: 60px;
-          background-color: #ffffff;
-          width: 100%;
+        .time {
+          margin: 0 5px;
+          color: #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: -70px;
 
-          h5 {
-            color: $primary;
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: 1px;
-          }
-          .stars {
-            a {
-              text-decoration: none;
-              color: rgb(42, 42, 42);
-              @extend .far;
-              @extend .fa-star;
-              &.full {
-                @extend .fas;
-              }
+          a {
+            text-decoration: none;
+            border-radius: 50%;
+            background-color: $form-border-color;
+            width: 70px;
+            height: 70px;
+            margin: 5px;
+            position: relative;
+            margin-top: -20px;
+
+            p {
+              position: absolute;
+              top: 0;
+              left: 0;
+              color: #fff;
+              font-size: 20px;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              text-transform: uppercase;
             }
           }
+        }
+      }
+
+      .content {
+        text-align: center;
+        margin-top: 80px;
+        background-color: #ffffff;
+        width: 100%;
+        border: 1px solid black;
+        position: relative;
+
+        h5 {
+          color: $primary;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 1px;
+        }
+        .stars {
+          a {
+            text-decoration: none;
+            color: rgb(42, 42, 42);
+            @extend .far;
+            @extend .fa-star;
+            &.full {
+              @extend .fas;
+            }
+          }
+        }
+
+        .line {
+          position: absolute;
         }
 
         .actions {
-          padding: 15px 10px 10px 10px;
-
           .outlines {
-            a {
-              .btn-outline {
-                &:hover {
-                  background-color: $primary;
-                  color: #ffffff;
-                }
+            .btn-outline {
+              &:hover {
+                background-color: $primary;
+                color: #ffffff;
               }
             }
           }
           .price {
-            position: relative;
-            display: flex;
-            justify-content: flex-end;
-            align-content: flex-start;
-            margin-top: -35px;
+            .btn-main-small {
+              position: relative;
+              display: flex;
+              justify-content: flex-end;
+              align-content: flex-start;
+              margin-top: -35px;
+              width: 60px;
+            }
           }
         }
       }
@@ -162,7 +173,7 @@
   .productpromo {
     margin-top: 0 30px;
     padding-top: 15px;
-    width: 100%;
+    border: 1px solid black;
     height: 100%;
     position: relative;
     background: {
