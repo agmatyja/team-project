@@ -40,19 +40,19 @@
         }
       }
 
-  &:hover {
-    .photo .buttons {
-      visibility: visible;
-    }
+      &:hover {
+        .photo .buttons {
+          visibility: visible;
+        }
 
-    .price .btn-main-small {
-      background-color: $primary;
-    }
-  }
+        .price .btn-main-small {
+          background-color: $primary;
+        }
+      }
 
-  .content {
-    text-align: center;
-    padding: 20px;
+      .content {
+        text-align: center;
+        padding: 20px;
 
         h5 {
           color: $primary;
@@ -91,25 +91,27 @@
         }
       }
 
-  .actions {
-    padding: 15px 10px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+      .actions {
+        padding: 15px 10px 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    .active {
-      background: $primary;
-      color: $white;
-      border-color: $primary;
+        .active {
+          background: $primary;
+          color: $white;
+          border-color: $primary;
+        }
+      }
+
+      .tns-controls {
+        display: none;
+      }
+
+      .tns-nav-active > a {
+        background-color: #d58e32 !important;
+        color: #d58e32;
+      }
     }
-  }
-
-  .tns-controls {
-    display: none;
-  }
-
-  .tns-nav-active > a {
-    background-color: #d58e32 !important;
-    color: #d58e32;
   }
 }
