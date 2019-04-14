@@ -3,6 +3,7 @@
   padding-bottom: 2rem;
 
   .box-feedback {
+    display: none;
     .header {
       i {
         width: 100%;
@@ -49,5 +50,8 @@
         }
       }
     }
+  }
+  .show {
+    display: block;
   }
 }
