@@ -223,20 +223,48 @@ header {
   }
 }
 
-@media (max-width: 522px) {
+@media (max-width: 320px) {
+  .top-bar {
+    height: auto;
+    margin-bottom: -20px;
+    .text-left ul li {
+      margin-right: -30px;
+      a {
+        margin-left: -5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: -30px;
+        i {
+          margin: 0 5px;
+        }
+      }
+    }
+    .text-right ul li {
+      margin-top: 20px;
+      margin-left: -50px;
+      a {
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: -11px;
+        margin-left: -22px;
+        i {
+          visibility: visible;
+          margin-left: -10px;
+        }
+      }
+    }
+  }
   .company-claim {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-
     .phone-number {
       order: 3;
       align-self: center;
       margin-top: 70px;
-      margin-left: -200px;
+      margin-left: -150px;
       margin-bottom: -30px;
       p {
         margin: 0;
@@ -261,8 +289,136 @@ header {
       align-self: flex-start;
       order: 2;
       margin-top: 30px;
-      margin-left: -120px;
-      margin-right: 50px;
+      margin-left: -100px;
+    }
+  }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+  .top-bar {
+    height: auto;
+    margin-bottom: -20px;
+
+    .text-left ul li {
+      a {
+        padding: 0 1px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: -30px;
+        i {
+          margin: 0 5px;
+        }
+      }
+    }
+    .text-right ul li {
+      margin-top: 20px;
+      margin-left: -50px;
+      a {
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: -11px;
+        margin-left: -22px;
+        i {
+          visibility: visible;
+          margin-left: -10px;
+        }
+      }
+    }
+  }
+
+  .company-claim {
+    .phone-number {
+      order: 3;
+      align-self: center;
+      margin-left: 150px;
+      p {
+        margin: 0;
+        font-size: 5px;
+        i {
+          font-size: 5px;
+        }
+      }
+    }
+
+    .logo {
+      a {
+        img {
+          margin-top: 10px;
+          margin-left: -20px;
+        }
+      }
+    }
+
+    .cart {
+      align-self: flex-start;
+      order: 2;
+      margin-top: 30px;
+      margin-left: -100px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 522px) {
+  .top-bar {
+    height: auto;
+    margin-bottom: -20px;
+    .text-left ul li {
+      a {
+        margin-left: -12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+    .text-right ul li {
+      a {
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        i {
+          visibility: visible;
+          margin-top: 20px;
+          margin-left: -15px;
+        }
+      }
+    }
+  }
+
+  .company-claim {
+    .phone-number {
+      order: 3;
+      align-self: center;
+      margin-left: 200px;
+      p {
+        margin: 0;
+        font-size: 5px;
+        i {
+          font-size: 5px;
+        }
+      }
+    }
+
+    .logo {
+      a {
+        img {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .cart {
+      margin-top: 30px;
+      margin-left: 100px;
+      margin-right: 10px;
     }
   }
 }
