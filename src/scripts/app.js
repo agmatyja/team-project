@@ -24,22 +24,22 @@ document.addEventListener('DOMContentLoaded', function () {
     autoplayText: ['▶', '❚❚']
   });
 
-  /* tns({
-      items: 1,
-      container: '.slider-promotion-1',
-      swipeAngle: false,
-      speed: 400,
-      mouseDrag: true,
-      navContainer: '.dots > ul'
-    });
-    tns({
-      items: 1,
-      container: '.slider-promotion-2',
-      swipeAngle: false,
-      speed: 400,
-      mouseDrag: true,
-      navContainer: '.dots > ul'
-    }); */
+  tns({
+    items: 1,
+    container: '.slider-promotion-1',
+    swipeAngle: false,
+    speed: 0,
+    mouseDrag: true,
+    navContainer: '.dots > ul'
+  });
+  tns({
+    items: 1,
+    container: '.slider-promotion-2',
+    swipeAngle: false,
+    speed: 0,
+    mouseDrag: true,
+    navContainer: '.dots > ul'
+  });
 
   tns({
     items: 1,
