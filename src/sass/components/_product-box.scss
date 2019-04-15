@@ -35,7 +35,18 @@
           bottom: 0px;
           width: 100%;
           display: flex;
+          visibility: hidden;
           justify-content: space-between;
+        }
+      }
+
+      &:hover {
+        .photo .buttons {
+          visibility: visible;
+        }
+
+        .price .btn-main-small {
+          background-color: $primary;
         }
       }
 
@@ -85,6 +96,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .active {
+          background: $primary;
+          color: $white;
+          border-color: $primary;
+        }
       }
     }
   }
