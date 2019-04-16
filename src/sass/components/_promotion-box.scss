@@ -129,5 +129,24 @@
     .tns-nav {
       display: none;
     }
+
+    .tns-controls {
+      display: block;
+    }
+
+    button {
+      background: black;
+      color: white;
+      text-align: center;
+      border: 1px solid white;
+      position: absolute;
+      top: 280px;
+      left: 375px;
+      width: 365px;
+    }
+
+    button:hover {
+      background: $primary;
+    }
   }
 }
