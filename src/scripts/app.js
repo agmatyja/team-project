@@ -15,13 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     },
     container: '.slider-promotion',
-    navContainer: '.dots > ul',
+    navContainer: '.slider-promotion-dots > ul',
     mouseDrag: true,
     speed: 0,
     autoplay: true,
     autoplayHoverPause: true,
     autoplayTimeout: 3000,
-    autoplayText: ['▶', '❚❚']
+    autoplayText: ['▶', '❚❚'],
+    controlsText: ['<', '>']
   });
 
   tns({
@@ -29,16 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     container: '.slider-promotion-1',
     swipeAngle: false,
     speed: 0,
-    mouseDrag: true,
-    navContainer: '.dots > ul'
-  });
-  tns({
-    items: 1,
-    container: '.slider-promotion-2',
-    swipeAngle: false,
-    speed: 0,
-    mouseDrag: true,
-    navContainer: '.dots > ul'
+    mouseDrag: true
   });
 
   tns({
@@ -58,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     swipeAngle: false,
     speed: 400,
     mouseDrag: true,
-    navContainer: '.dots > ul'
+    navContainer: '.slider-products-dots > ul'
   });
 });
 
