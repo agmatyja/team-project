@@ -1,7 +1,6 @@
 .section--promotion {
   .promotion-box {
     background-color: #ffffff;
-    margin-bottom: 2rem;
     position: relative;
     display: inline-block;
     visibility: hidden;
@@ -12,12 +11,8 @@
 
     .photo {
       max-height: 300px;
-    }
-
-    photo {
-      width: 100%;
-      padding-bottom: 2%;
-      object-fit: cover;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
     }
   }
 
@@ -27,11 +22,30 @@
     }
 
     .f2 {
-      background-image: url("/images/promotion/Sofa_small.jpg");
+      background-image: url("/images/promotion/bed_small.jpg");
     }
 
     .f3 {
+      background-image: url("/images/promotion/Sofa_small2.jpg");
+    }
+
+    .time {
+      text-align: center;
+      padding: 20px 0;
+    }
+  }
+
+  .slider-promotion-1 {
+    .f1 {
       background-image: url("/images/promotion/Sofa_small.jpg");
+    }
+
+    .f2 {
+      background-image: url("/images/promotion/bed_small.jpg");
+    }
+
+    .f3 {
+      background-image: url("/images/promotion/Sofa_small2.jpg");
     }
   }
 
@@ -45,7 +59,16 @@
   }
 
   .description {
+    text-align: center;
     display: inline-block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 60%;
+    color: white;
+    font-weight: 800;
+    p {
+      display: block;
+    }
   }
 
   .slider-button {
@@ -53,38 +76,25 @@
   }
 
   .hero {
-    background-image: url("/images/promotion/Sofa_small.jpg");
+    height: 280px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 80px;
   }
 
   .carousel-indicators {
     color: #ffffff;
     background-color: #000000;
     width: 50%;
-  }
-
-  .carousel-indicators .active {
-    background-color: $primary;
-  }
-
-  .photo-second {
-    height: 300px;
+    .active {
+      background-color: $primary;
+    }
   }
 
   .panel-bar {
     margin: 0 10px;
     height: 320px;
-  }
-
-  .col-4 .col-8 {
-    margin: 0 10px;
-  }
-
-  span {
-    text-align: center;
-  }
-
-  .hero {
-    height: 280px;
   }
 
   .tns-nav-active > a {
@@ -134,19 +144,21 @@
       display: block;
     }
 
-    button {
-      background: black;
-      color: white;
-      text-align: center;
-      border: 1px solid white;
-      position: absolute;
-      top: 280px;
-      left: 375px;
-      width: 365px;
-    }
-
-    button:hover {
-      background: $primary;
+    .buttons {
+      display: flex;
+      button {
+        height: 20px;
+        background: black;
+        color: white;
+        text-align: center;
+        border: 1px solid white;
+        line-height: 20px;
+        width: 50%;
+        &:hover {
+          background: $primary;
+          border-color: $primary;
+        }
+      }
     }
   }
 }

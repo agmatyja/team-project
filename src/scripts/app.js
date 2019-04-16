@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
     swipeAngle: false,
     speed: 0,
     mouseDrag: true,
-    controlsText: ['<', '>']
+    controlsText: ['<', '>'],
+    controlsPosition: 'bottom',
+    controlsContainer: '.prom-2-car .buttons'
   });
 
   tns({
