@@ -266,11 +266,11 @@ header {
       margin-top: 70px;
       margin-left: -150px;
       margin-bottom: -30px;
+      font-size: 10px;
       p {
         margin: 0;
-        font-size: 5px;
+        font-size: 10px;
         i {
-          font-size: 5px;
           margin-left: -50px;
         }
       }
@@ -278,18 +278,18 @@ header {
 
     .logo {
       a {
+        margin-top: -30px;
         img {
-          margin-top: -50px;
           margin-right: 50px;
         }
       }
     }
 
     .cart {
-      align-self: flex-start;
       order: 2;
-      margin-top: 30px;
-      margin-left: -100px;
+      align-self: flex-start;
+      margin-top: 40px;
+      margin-left: -60px;
     }
   }
 }
@@ -335,17 +335,15 @@ header {
     .phone-number {
       order: 3;
       align-self: center;
-      margin-left: 150px;
+      margin-left: 120px;
       p {
         margin: 0;
-        font-size: 5px;
-        i {
-          font-size: 5px;
-        }
+        font-size: 12px;
       }
     }
 
     .logo {
+      align-self: flex-start;
       a {
         img {
           margin-top: 10px;
@@ -355,8 +353,8 @@ header {
     }
 
     .cart {
-      align-self: flex-start;
       order: 2;
+      align-self: flex-start;
       margin-top: 30px;
       margin-left: -100px;
       margin-right: 10px;
@@ -394,16 +392,20 @@ header {
   }
 
   .company-claim {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
     .phone-number {
       order: 3;
       align-self: center;
-      margin-left: 200px;
+      margin-left: 190px;
       p {
         margin: 0;
-        font-size: 5px;
-        i {
-          font-size: 5px;
-        }
+        font-size: 14px;
       }
     }
 
@@ -452,8 +454,8 @@ header {
       margin-bottom: -50px;
       p {
         margin: 0;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 16px;
         color: rgb(216, 216, 216);
         font-weight: 500;
         i {
