@@ -91,11 +91,43 @@
     background-color: #d58e32 !important;
     color: #d58e32;
   }
-}
-.data-controls {
-  display: none;
-}
-ul aria-label {
-  background: #000000;
-  display: block;
+
+  .prom-1-car {
+    .slider-promotion-dots {
+      background: #000000;
+      z-index: 1000;
+      height: 24px;
+      border-radius: 0;
+
+      h5 {
+        color: white;
+        float: left;
+        padding-left: 10px;
+        display: inline-block;
+      }
+
+      ul {
+        display: block;
+        float: right;
+        padding-right: 10px;
+        display: inline-block;
+        background: transparent;
+        transform: none;
+      }
+    }
+
+    .tns-controls {
+      display: none;
+    }
+
+    button {
+      visibility: hidden;
+    }
+  }
+
+  .prom-2-car {
+    .tns-nav {
+      display: none;
+    }
+  }
 }
