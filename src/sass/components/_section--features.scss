@@ -4,21 +4,19 @@
   a {
     text-decoration: none;
 
+    &.active,
     &:hover {
       .feature-box {
         .icon {
-          background-color: $primary;
+          i {
+            background-color: $primary;
+            color: #ffffff;
+            border-color: $primary;
+          }
         }
-        i {
-          color: #ffffff;
-        }
+
         .content {
-          h5 {
-            color: $primary;
-          }
-          p {
-            color: $primary;
-          }
+          color: $primary;
         }
       }
     }
