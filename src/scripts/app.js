@@ -127,6 +127,7 @@ function swipedetect (el, callback) {
       startTime = new Date().getTime(); // record time when finger first makes contact with surface
       e.preventDefault();
     },
+    { passive: false },
     false
   );
 
@@ -135,6 +136,7 @@ function swipedetect (el, callback) {
     function (e) {
       e.preventDefault(); // prevent scrolling when inside DIV
     },
+    { passive: false },
     false
   );
 
@@ -156,8 +158,9 @@ function swipedetect (el, callback) {
         }
       }
       handleswipe(swipedir);
-      e.preventDefault();
+      // e.preventDefault();
     },
+    { passive: true },
     false
   );
 }
