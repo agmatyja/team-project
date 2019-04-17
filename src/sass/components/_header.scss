@@ -89,7 +89,9 @@ header {
         }
 
         .cart-counter {
-          width: 28px;
+          min-width: 28px;
+          max-width: 50px;
+          padding: 0 2px;
           height: 27px;
           border-radius: 14px;
           background-color: $header-bg;
@@ -101,7 +103,7 @@ header {
           position: absolute;
           top: 50%;
           right: 0;
-          transform: translate(50%, -50%);
+          transform: translate(65%, -50%);
         }
 
         &:hover {
@@ -174,9 +176,23 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+        cursor: pointer;
+
+        &:hover {
+          background: $primary;
+
+          i:first-child,
+          i:last-child,
+          select {
+            color: $text-color-hover;
+
+            option {
+              color: $form-border-color;
+            }
+          }
+        }
 
         i:first-child {
-          color: $primary;
           position: absolute;
           left: 10px;
           z-index: 0;
@@ -188,15 +204,66 @@ header {
           z-index: 0;
         }
 
-        select {
-          -webkit-appearance: none;
-          border: 0;
+        .category-list {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0;
           background-color: transparent;
-          outline: none;
           padding: 5px 30px 5px 35px;
           font-size: 14px;
           position: relative;
           z-index: 1;
+
+          & > ul {
+            display: none;
+            position: absolute;
+            box-shadow: 1px 2px 2px $form-border-color;
+            list-style-type: none;
+            padding-inline-start: 0;
+            top: 37px;
+            left: 0;
+            background: #ffffff;
+            white-space: nowrap;
+          }
+
+          ul > li {
+            display: block;
+            height: 45px;
+            line-height: 40px;
+            text-align: center;
+            color: $text-color;
+            cursor: pointer;
+            position: relative;
+            padding: 5px 30px 5px 35px;
+            white-space: nowrap;
+
+            &:hover {
+              background: $primary;
+            }
+          }
+
+          li {
+            & > ul {
+              display: none;
+              position: absolute;
+              box-shadow: 1px 2px 2px $form-border-color;
+              list-style-type: none;
+              padding-inline-start: 0;
+              top: 0;
+              left: 100%;
+              background: #ffffff;
+              white-space: nowrap;
+            }
+
+            &:hover > ul {
+              display: block;
+            }
+          }
+        }
+
+        &:hover > .category-list > ul {
+          display: block;
         }
       }
 
