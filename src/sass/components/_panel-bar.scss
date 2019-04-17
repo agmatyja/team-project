@@ -34,7 +34,6 @@
       padding: 0;
       list-style: none;
       li {
-        display: inline-block;
         margin: 0 0.5rem;
         font-weight: 600;
 
@@ -86,44 +85,6 @@
           }
         }
       }
-    }
-  }
-}
-
-@media (max-width: 567px) {
-  .menu {
-    display: block;
-    float: left;
-    position: relative;
-  }
-}
-
-@media (max-width: 767px) and (min-width: 568px) {
-  .menu {
-    display: block;
-    float: left;
-    position: relative;
-  }
-}
-
-@media screen and (orientation: portrait) {
-  .panel-bar {
-    width: 768px;
-    .menu {
-      display: block;
-      float: left;
-      position: relative;
-    }
-  }
-}
-
-@media screen and (orientation: landscape) {
-  .panel-bar {
-    width: 1024px;
-    .menu {
-      display: block;
-      float: left;
-      position: relative;
     }
   }
 }
