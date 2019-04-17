@@ -1,76 +1,76 @@
 'use strict';
 
-function toggleBedlist (visible) {
-  document.querySelector('.bedlist').classList.toggle('show', visible);
-  document.querySelector('.chairlist').classList.remove('show');
-  document.querySelector('.sofalist').classList.remove('show');
-  document.querySelector('.tablelist').classList.remove('show');
-  document.querySelector('.dininglist').classList.remove('show');
+function toggleBed (visible) {
+  document.querySelector('#bed').classList.toggle('show', visible);
+  document.querySelector('#chair').classList.remove('show');
+  document.querySelector('#sofa').classList.remove('show');
+  document.querySelector('#table').classList.remove('show');
+  document.querySelector('#dining').classList.remove('show');
 }
 
-toggleBedlist();
+toggleBed();
 
-document.querySelector('.bed').addEventListener('click', function (e) {
+document.querySelector('#bed').addEventListener('click', function (e) {
   e.preventDefault();
-  toggleBedlist();
+  toggleBed();
 });
 
-function toggleChairlist (visible) {
-  document.querySelector('.chairlist').classList.toggle('show', visible);
-  document.querySelector('.bedlist').classList.remove('show');
-  document.querySelector('.sofalist').classList.remove('show');
-  document.querySelector('.tablelist').classList.remove('show');
-  document.querySelector('.dininglist').classList.remove('show');
+function toggleChair (visible) {
+  document.querySelector('#chair').classList.toggle('show', visible);
+  document.querySelector('#bed').classList.remove('show');
+  document.querySelector('#sofa').classList.remove('show');
+  document.querySelector('#table').classList.remove('show');
+  document.querySelector('#dining').classList.remove('show');
 }
 
-toggleChairlist();
+toggleChair();
 
-document.querySelector('.chair').addEventListener('click', function (e) {
+document.querySelector('#chair').addEventListener('click', function (e) {
   e.preventDefault();
-  toggleChairlist();
+  toggleChair();
 });
 
-function toggleSofalist (visible) {
-  document.querySelector('.sofalist').classList.toggle('show', visible);
-  document.querySelector('.bedlist').classList.remove('show');
-  document.querySelector('.chairlist').classList.remove('show');
-  document.querySelector('.tablelist').classList.remove('show');
-  document.querySelector('.dininglist').classList.remove('show');
+function toggleSofa (visible) {
+  document.querySelector('#sofa').classList.toggle('show', visible);
+  document.querySelector('#bed').classList.remove('show');
+  document.querySelector('#chair').classList.remove('show');
+  document.querySelector('#table').classList.remove('show');
+  document.querySelector('#dining').classList.remove('show');
 }
 
-toggleSofalist();
+toggleSofa();
 
-document.querySelector('.sofa').addEventListener('click', function (e) {
+document.querySelector('#sofa').addEventListener('click', function (e) {
   e.preventDefault();
-  toggleSofalist();
+  toggleSofa();
 });
 
-function toggleTablelist (visible) {
-  document.querySelector('.tablelist').classList.toggle('show', visible);
-  document.querySelector('.bedlist').classList.remove('show');
-  document.querySelector('.chairlist').classList.remove('show');
-  document.querySelector('.sofalist').classList.remove('show');
-  document.querySelector('.dininglist').classList.remove('show');
+function toggleTable (visible) {
+  document.querySelector('#table').classList.toggle('show', visible);
+  document.querySelector('#bed').classList.remove('show');
+  document.querySelector('#chair').classList.remove('show');
+  document.querySelector('#sofa').classList.remove('show');
+  document.querySelector('#dining').classList.remove('show');
 }
 
-toggleTablelist();
+toggleTable();
 
-document.querySelector('.table').addEventListener('click', function (e) {
+document.querySelector('#table').addEventListener('click', function (e) {
   e.preventDefault();
-  toggleTablelist();
+  toggleTable();
 });
 
-function toggleDininglist (visible) {
-  document.querySelector('.dininglist').classList.toggle('show', visible);
-  document.querySelector('.bedlist').classList.remove('show');
-  document.querySelector('.chairlist').classList.remove('show');
-  document.querySelector('.sofalist').classList.remove('show');
-  document.querySelector('.tablelist').classList.remove('show');
+function toggleDining (visible) {
+  document.querySelector('#dining').classList.toggle('show', visible);
+  document.querySelector('#bed').classList.remove('show');
+  document.querySelector('#chair').classList.remove('show');
+  document.querySelector('#table').classList.remove('show');
+  document.querySelector('#sofa').classList.remove('show');
 }
 
-toggleDininglist();
+toggleDining();
 
-document.querySelector('.dining').addEventListener('click', function (e) {
+document.querySelector('#dining').addEventListener('click', function (e) {
   e.preventDefault();
-  toggleDininglist();
+  toggleDining();
 });

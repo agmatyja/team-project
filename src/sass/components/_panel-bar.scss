@@ -59,6 +59,25 @@
         }
       }
     }
+    .tab-content {
+      #bed {
+        &.show {
+          display: flex;
+        }
+      }
+      #chair {
+        @extend #bed;
+      }
+      #sofa {
+        @extend #bed;
+      }
+      #table {
+        @extend #bed;
+      }
+      #dining {
+        @extend #bed;
+      }
+    }
   }
 
   .dots {
