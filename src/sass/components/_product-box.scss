@@ -104,15 +104,15 @@
         }
       }
 
-      .tns-controls {
-        display: none;
-      }
-
       .tns-nav-active > a {
         background-color: #d58e32 !important;
         color: #d58e32;
       }
     }
+  }
+
+  .tns-controls {
+    display: none;
   }
 }
 .description {
