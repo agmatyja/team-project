@@ -94,7 +94,6 @@
 
   .panel-bar {
     margin: 0 10px;
-    height: 320px;
   }
 
   .tns-nav-active > a {
@@ -135,6 +134,12 @@
     }
   }
 
+  @media (max-width: 992px) {
+    .prom-1-car {
+      margin-bottom: 20px;
+    }
+  }
+
   .prom-2-car {
     .tns-nav {
       display: none;
@@ -159,6 +164,12 @@
           border-color: $primary;
         }
       }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .mobile {
+      display: none;
     }
   }
 }
