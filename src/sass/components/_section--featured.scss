@@ -356,16 +356,24 @@
 
       .dealspromo {
         background-color: $form-border-color;
-        height: 50px;
+        height: 40px;
         width: 100%;
         position: absolute;
         color: #f4f5f7;
         display: flex;
         justify-content: flex-start;
-        margin-top: -280px;
+        margin-top: -180px;
         margin-left: -10px;
-        padding: 10px;
         text-transform: uppercase;
+        font-size: 15px;
+        text-align: center;
+        padding: 10 0px;
+
+        h5 {
+          margin-left: 5px;
+          margin-top: 20px;
+          font-size: 15px;
+        }
 
         .dots {
           position: absolute;
@@ -373,7 +381,8 @@
           background-color: $form-border-color;
           display: inline-block;
           width: 40%;
-          margin-left: 250px;
+          margin-left: 120px;
+          margin-top: 15px;
 
           ul {
             margin: 0;
