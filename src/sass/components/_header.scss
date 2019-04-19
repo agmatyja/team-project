@@ -223,7 +223,91 @@ header {
   }
 }
 
-@media (max-width: 335px) {
+@media (max-width: 266px) {
+  .top-bar {
+    height: auto;
+    margin-bottom: -30px;
+    .text-left ul li {
+      margin-left: -20px;
+      width: 80%;
+      height: 80%;
+      a {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: -40px;
+        padding: 0 10px;
+        margin-left: 13px;
+        font-size: 10px;
+        i {
+          margin: 0 4px;
+        }
+      }
+    }
+    .text-right ul li {
+      margin-top: 20px;
+      margin-left: -70px;
+      a {
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: -30px;
+        margin-left: -22px;
+        i {
+          visibility: visible;
+          margin-left: -70px;
+          margin-right: -15px;
+          width: 80%;
+          height: 80%;
+        }
+      }
+    }
+  }
+  .company-claim {
+    .phone-number {
+      order: 3;
+      align-self: center;
+      margin-top: 60px;
+      margin-left: -150px;
+      margin-bottom: -30px;
+      p {
+        margin: 0;
+        font-size: 1px;
+        line-height: 1px;
+        font-weight: 50;
+        i {
+          margin-left: -70px;
+          font-size: 1px;
+          line-height: 1px;
+        }
+      }
+    }
+
+    .logo {
+      align-self: flex-start;
+      a {
+        img {
+          width: 80%;
+          height: 80%;
+          margin-top: 20px;
+          margin-left: -20px;
+        }
+      }
+    }
+
+    .cart {
+      order: 2;
+      align-self: center;
+      margin-top: -40px;
+      margin-left: -60px;
+    }
+  }
+}
+
+@media (min-width: 267px) and (max-width: 335px) {
   .top-bar {
     height: auto;
     margin-bottom: -30px;
@@ -253,7 +337,7 @@ header {
         justify-content: flex-end;
         align-items: center;
         margin-right: -11px;
-        margin-left: -22px;
+        margin-left: -40px;
         i {
           visibility: visible;
           margin-left: -10px;
@@ -287,7 +371,7 @@ header {
         img {
           width: 80%;
           height: 80%;
-          margin-top: -50px;
+          margin-top: 20px;
           margin-left: -20px;
         }
       }
@@ -296,8 +380,10 @@ header {
     .cart {
       order: 2;
       align-self: center;
-      margin-top: -20px;
+      margin-top: 20px;
       margin-left: -60px;
+      width: 80%;
+      height: 80%;
     }
   }
 }
@@ -342,7 +428,7 @@ header {
   .company-claim {
     .phone-number {
       order: 3;
-      align-self: center;
+      align-self: flex-end;
       margin-left: 120px;
       font-size: 4px;
       p {
@@ -357,16 +443,16 @@ header {
       a {
         img {
           margin-top: 10px;
-          margin-left: -20px;
+          margin-left: -10px;
         }
       }
     }
 
     .cart {
       order: 2;
-      align-self: flex-start;
-      margin-top: 30px;
-      margin-left: -100px;
+      align-self: center;
+      margin-top: -10px;
+      margin-left: 50px;
       margin-right: 10px;
     }
   }
@@ -458,6 +544,7 @@ header {
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
+        margin-left: -15px;
         i {
           visibility: visible;
           margin-top: 20px;
@@ -571,9 +658,10 @@ header {
     .text-right ul li {
       a {
         visibility: hidden;
+        margin-left: -10px;
       }
       i {
-        margin: 0 -8px;
+        margin: 0 -5px;
         visibility: visible;
       }
     }
