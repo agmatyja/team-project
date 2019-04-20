@@ -106,6 +106,14 @@
           justify-content: space-between;
           margin: 0;
 
+          li {
+            display: none;
+          }
+
+          .active {
+            display: block;
+          }
+
           .thumb-1 {
             background: url(../images/products/furniture-gallery1.jpg) no-repeat;
           }
@@ -194,12 +202,16 @@
         background: url(../images/products/furniture-gallery1.jpg) no-repeat;
       }
 
-      .active {
-        display: block !important;
-      }
-
       .thumbnails {
         .thumbnails-list {
+          li {
+            display: none;
+          }
+
+          .active {
+            display: block;
+          }
+
           .top-seller-thumb-1 {
             background: url(../images/products/furniture-gallery6.jpg) no-repeat;
           }
@@ -270,6 +282,14 @@
 
       .thumbnails {
         .thumbnails-list {
+          li {
+            display: none;
+          }
+
+          .active {
+            display: block;
+          }
+
           .sale-off-thumb-1 {
             background: url(../images/products/furniture-gallery6.jpg) no-repeat;
           }
@@ -340,6 +360,14 @@
 
       .thumbnails {
         .thumbnails-list {
+          li {
+            display: none;
+          }
+
+          .active {
+            display: block;
+          }
+
           .top-rated-thumb-1 {
             background: url(../images/products/furniture-gallery6.jpg) no-repeat;
           }

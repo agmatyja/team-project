@@ -131,9 +131,9 @@ window.addEventListener('load', function () {
 
 // thumbnails animation
 
-const thumbPrev = document.querySelector('.thumbnails .fa-chevron-left');
-const thumbNext = document.querySelector('.thumbnails .fa-chevron-right');
-const thumb = document.querySelector('.thumbnails-list .thumb');
+const thumbPrev = document.querySelector('.thumbnails .prev');
+const thumbNext = document.querySelector('.thumbnails .next');
+const thumb = document.querySelector('.thumbnails-list');
 
 let thumbMoveLeft = function (items) {
   for (let k = 0; k < items; k++) {
