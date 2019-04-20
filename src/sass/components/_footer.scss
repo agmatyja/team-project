@@ -19,6 +19,7 @@ footer {
             font-size: 14px;
             line-height: 30px;
             color: rgb(169, 169, 169);
+            @extend %hover-background-animation;
 
             &:hover {
               color: #ffffff;
@@ -26,6 +27,9 @@ footer {
           }
         }
       }
+    }
+    .cards {
+      max-width: 100%;
     }
 
     .payment-methods {
@@ -68,6 +72,7 @@ footer {
           a {
             color: rgb(169, 169, 169);
             text-decoration: none;
+            @extend %hover-background-animation;
 
             &:hover {
               color: $primary;

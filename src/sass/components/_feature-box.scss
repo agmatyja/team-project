@@ -2,6 +2,9 @@
   border: 1px solid #b6b6b6;
   text-align: center;
   margin-top: 40px;
+  @media (max-width: 640px) {
+    min-height: 148px;
+  }
 
   .icon {
     transform: translateY(-50%);
