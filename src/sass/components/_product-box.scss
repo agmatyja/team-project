@@ -104,6 +104,24 @@
         }
       }
     }
+
+    .price-old {
+      display: block;
+
+      .text-main-small {
+        @extend .btn-main-small;
+        font-size: 16px;
+        font-weight: 200;
+        color: $text-color-light;
+        background-color: transparent;
+        text-decoration-line: line-through;
+        text-decoration-color: $text-color;
+      }
+    }
+
+    .no-exist {
+      display: none;
+    }
   }
 
   .tns-controls {
