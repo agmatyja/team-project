@@ -27,6 +27,7 @@ window.addEventListener('load', function () {
 
 window.addEventListener('load', function () {
   const thumbnails = document.getElementsByClassName('thumb');
+
   function myTabClicks (tabClickEvent) {
     for (let i = 0; i < thumbnails.length; i++) {
       thumbnails[i].classList.remove('thumb-active');
@@ -38,12 +39,90 @@ window.addEventListener('load', function () {
 
     const bigPhoto = document.getElementsByClassName('bigPhoto');
     for (let i = 0; i < bigPhoto.length; i++) {
-      bigPhoto[i].classList.remove('active-photo');
+      bigPhoto[i].classList.remove('active');
     }
     const anchorReference = tabClickEvent.target;
     const bigPhotoactive = anchorReference.getAttribute('href');
-    const activePhoto = document.getElementsByClassName(bigPhotoactive);
-    activePhoto.classList.add('active-photo');
+    const activePhoto = document.querySelector(bigPhotoactive);
+    activePhoto.classList.add('active');
+  }
+  for (let i = 0; i < thumbnails.length; i++) {
+    thumbnails[i].addEventListener('click', myTabClicks);
+  }
+});
+
+window.addEventListener('load', function () {
+  const thumbnails = document.getElementsByClassName('top-seller-thumb');
+
+  function myTabClicks (tabClickEvent) {
+    for (let i = 0; i < thumbnails.length; i++) {
+      thumbnails[i].classList.remove('top-seller-thumb-active');
+    }
+
+    const clickedThumb = tabClickEvent.currentTarget;
+    clickedThumb.classList.add('top-seller-thumb-active');
+    tabClickEvent.preventDefault();
+
+    const bigPhoto = document.getElementsByClassName('top-seller-bigPhoto');
+    for (let i = 0; i < bigPhoto.length; i++) {
+      bigPhoto[i].classList.remove('active');
+    }
+    const anchorReference = tabClickEvent.target;
+    const bigPhotoactive = anchorReference.getAttribute('href');
+    const activePhoto = document.querySelector(bigPhotoactive);
+    activePhoto.classList.add('active');
+  }
+  for (let i = 0; i < thumbnails.length; i++) {
+    thumbnails[i].addEventListener('click', myTabClicks);
+  }
+});
+
+window.addEventListener('load', function () {
+  const thumbnails = document.getElementsByClassName('sale-off-thumb');
+
+  function myTabClicks (tabClickEvent) {
+    for (let i = 0; i < thumbnails.length; i++) {
+      thumbnails[i].classList.remove('sale-off-thumb-active');
+    }
+
+    const clickedThumb = tabClickEvent.currentTarget;
+    clickedThumb.classList.add('sale-off-thumb-active');
+    tabClickEvent.preventDefault();
+
+    const bigPhoto = document.getElementsByClassName('sale-off-bigPhoto');
+    for (let i = 0; i < bigPhoto.length; i++) {
+      bigPhoto[i].classList.remove('active');
+    }
+    const anchorReference = tabClickEvent.target;
+    const bigPhotoactive = anchorReference.getAttribute('href');
+    const activePhoto = document.querySelector(bigPhotoactive);
+    activePhoto.classList.add('active');
+  }
+  for (let i = 0; i < thumbnails.length; i++) {
+    thumbnails[i].addEventListener('click', myTabClicks);
+  }
+});
+
+window.addEventListener('load', function () {
+  const thumbnails = document.getElementsByClassName('top-rated-thumb');
+
+  function myTabClicks (tabClickEvent) {
+    for (let i = 0; i < thumbnails.length; i++) {
+      thumbnails[i].classList.remove('top-rated-thumb-active');
+    }
+
+    const clickedThumb = tabClickEvent.currentTarget;
+    clickedThumb.classList.add('top-rated-thumb-active');
+    tabClickEvent.preventDefault();
+
+    const bigPhoto = document.getElementsByClassName('top-rated-bigPhoto');
+    for (let i = 0; i < bigPhoto.length; i++) {
+      bigPhoto[i].classList.remove('active');
+    }
+    const anchorReference = tabClickEvent.target;
+    const bigPhotoactive = anchorReference.getAttribute('href');
+    const activePhoto = document.querySelector(bigPhotoactive);
+    activePhoto.classList.add('active');
   }
   for (let i = 0; i < thumbnails.length; i++) {
     thumbnails[i].addEventListener('click', myTabClicks);
