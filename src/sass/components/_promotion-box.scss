@@ -1,11 +1,11 @@
 .promotion-box {
   background-color: #ffffff;
   margin-bottom: 2rem;
-  height: 300px;
+  height: 420px;
   position: relative;
 
   .photo-main {
-    height: 300px;
+    height: 100%;
   }
 
   .hero {
@@ -13,11 +13,11 @@
     flex-direction: column;
     color: #ffffff;
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 7%;
+    left: 7%;
     background: rgba(116, 114, 114, 0.5);
-    width: 80%;
-    height: 80%;
+    width: 86%;
+    height: 86%;
 
     .description {
       display: flex;
@@ -30,32 +30,39 @@
       p {
         margin: 0;
         padding: 0;
+        font-family: "Poppins";
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 40px;
 
-        &:nth-child(1) span {
-          font-size: 16px;
-        }
-
-        &:nth-child(2) span {
-          font-size: 24px;
-          font-weight: bold;
+        &:nth-child(1) {
+          line-height: 17px;
+          span {
+            font-weight: 600;
+            font-size: 22px;
+          }
         }
 
         &:nth-child(3) span {
-          padding: 3px;
-          font-size: 20px;
+          font-weight: 600;
+          padding: 0 10px;
           border: 2px solid #ffffff;
+          font-size: 28px;
         }
       }
     }
   }
 
   .photo-second {
-    height: 150px;
+    height: 195px;
+
+    &:nth-child(1) {
+      margin-bottom: 30px;
+    }
   }
 
   img {
     width: 100%;
-    padding-bottom: 2%;
     object-fit: cover;
   }
 }
