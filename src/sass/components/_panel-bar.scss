@@ -1,5 +1,6 @@
 .panel-bar {
   margin-bottom: 30px;
+  @extend %hover-background-animation;
 
   .row > * {
     border-bottom: 4px solid #e2e2e2;
@@ -44,16 +45,20 @@
           text-decoration: none;
           font-size: 18px;
           display: block;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            border-bottom: 4px solid transparent;
+            @extend %hover-background-animation;
+          }
 
           &.active,
           &:hover {
             &::before {
-              content: "";
-              position: absolute;
-              bottom: -4px;
-              left: 0;
-              width: 100%;
-              border-bottom: 4px solid $primary;
+              border-color: $primary;
             }
           }
         }
@@ -79,6 +84,7 @@
           height: 13px;
           border-radius: 6px;
           background-color: #e1e1e1;
+          @extend %hover-background-animation;
 
           &.active,
           &:hover {

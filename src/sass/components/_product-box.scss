@@ -8,8 +8,7 @@
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
-      color: #f4f5f7;
-      size: contain;
+      size: auto;
       position: center;
       repeat: no-repeat;
     }
@@ -29,7 +28,18 @@
 
     .buttons {
       display: flex;
+      visibility: hidden;
       justify-content: space-between;
+    }
+  }
+
+  &:hover {
+    .photo .buttons {
+      visibility: visible;
+    }
+
+    .price .btn-main-small {
+      background-color: $primary;
     }
   }
 
@@ -79,5 +89,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .active {
+      background: $primary;
+      color: $white;
+      border-color: $primary;
+    }
+    
+    .price-old {
+      display: block;
+
+      .text-main-small {
+        @extend .btn-main-small;
+        font-size: 16px;
+        font-weight: 200;
+        color: $text-color-light;
+        background-color: transparent;
+        text-decoration-line: line-through;
+        text-decoration-color: $text-color;
+      }
+    }
+
+    .no-exist {
+      display: none;
+    }
   }
 }
