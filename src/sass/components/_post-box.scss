@@ -1,54 +1,73 @@
-.post-box {
-  margin-bottom: 2rem;
+.section--posts {
+  .slider-posts {
+    flex-wrap: nowrap;
 
-  .cover {
-    padding: 70% 25px 0 25px;
-    background: {
-      size: cover;
-      position: center;
-      color: #f4f5f7;
-    }
+    .post-box {
+      margin-bottom: 2rem;
+      display: inline-block;
 
-    .details {
-      padding: 15px 20px;
-      display: flex;
-      background-color: #ffffff;
-      font-size: 14px;
+      .cover {
+        padding: 70% 25px 0 25px;
+        background: {
+          size: cover;
+          position: center;
+          color: #f4f5f7;
+        }
 
-      & > * {
-        flex: 1 1 auto;
+        .details {
+          padding: 15px 20px;
+          display: flex;
+          background-color: #ffffff;
+          font-size: 14px;
+
+          & > * {
+            flex: 1 1 auto;
+          }
+
+          .date {
+            text-align: left;
+          }
+
+          .comments {
+            text-align: right;
+          }
+        }
       }
 
-      .date {
-        text-align: left;
-      }
+      .post-info {
+        padding: 25px;
 
-      .comments {
-        text-align: right;
+        h5 {
+          color: $primary;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 1px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 24px;
+          color: rgb(103, 103, 103);
+          text-align: justify;
+        }
+
+        .more {
+          text-align: center;
+          padding-top: 30px;
+        }
       }
     }
   }
+  .tns-inner {
+    overflow: hidden;
+  }
 
-  .post-info {
-    padding: 25px;
+  .tns-controls {
+    display: none;
+  }
 
-    h5 {
-      color: $primary;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 1px;
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 24px;
-      color: rgb(103, 103, 103);
-      text-align: justify;
-    }
-
-    .more {
-      text-align: center;
-      padding-top: 30px;
-    }
+  .tns-nav-active > a {
+    background-color: #d58e32 !important;
+    color: #d58e32;
   }
 }
