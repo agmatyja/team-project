@@ -1,4 +1,4 @@
-.section--posts {
+.section--blog-posts {
   .slider-posts {
     flex-wrap: nowrap;
 
@@ -58,16 +58,15 @@
       }
     }
   }
+  .no-exist {
+    display: none;
+  }
+
   .tns-inner {
     overflow: hidden;
   }
 
   .tns-controls {
     display: none;
-  }
-
-  .tns-nav-active > a {
-    background-color: #d58e32 !important;
-    color: #d58e32;
   }
 }
