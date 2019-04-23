@@ -34,49 +34,6 @@ const brandPrev = document.querySelector('.section--brand .fa-chevron-left');
 const brandNext = document.querySelector('.section--brand .fa-chevron-right');
 const brand = document.querySelector('.section--brand .photos');
 
-let brandCount = function () {
-  const width = window.outerWidth;
-  if (width <= 400) {
-    return 1;
-  } else if (width <= 600) {
-    return 2;
-  } else if (width <= 768) {
-    return 3;
-  } else if (width <= 990) {
-    return 4;
-  } else if (width <= 1000) {
-    return 5;
-  } else if (width > 1000) {
-    return 6;
-  }
-};
-
-let brandShow = function () {
-  let countItem = brandCount();
-  for (let i = 0; i < brand.children.length && i < countItem; i++) {
-    brand.children[i].classList.add('active');
-  }
-};
-
-let brandReset = function () {
-  for (let i = 0; i < brand.children.length; i++) {
-    brand.children[i].classList.remove('active');
-  }
-};
-
-let brandActive = function () {
-  brandReset();
-  brandShow();
-};
-
-document.addEventListener('DOMContentLoaded', function () {
-  brandActive();
-});
-
-window.addEventListener('resize', function () {
-  brandActive();
-});
-
 let brandMoveLeft = function (items) {
   for (let k = 0; k < items; k++) {
     for (let i = 1; i < brand.children.length; i++) {
@@ -125,6 +82,49 @@ brandPrev.addEventListener('click', function () {
 brandNext.addEventListener('click', function () {
   const countItem = brandCount();
   brandMoveRight(countItem);
+});
+
+let brandCount = function () {
+  const width = window.outerWidth;
+  if (width <= 400) {
+    return 1;
+  } else if (width <= 600) {
+    return 2;
+  } else if (width <= 768) {
+    return 3;
+  } else if (width <= 990) {
+    return 4;
+  } else if (width <= 1000) {
+    return 5;
+  } else if (width > 1000) {
+    return 6;
+  }
+};
+
+let brandShow = function () {
+  let countItem = brandCount();
+  for (let i = 0; i < brand.children.length && i < countItem; i++) {
+    brand.children[i].classList.add('active');
+  }
+};
+
+let brandReset = function () {
+  for (let i = 0; i < brand.children.length; i++) {
+    brand.children[i].classList.remove('active');
+  }
+};
+
+let brandActive = function () {
+  brandReset();
+  brandShow();
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  brandActive();
+});
+
+window.addEventListener('resize', function () {
+  brandActive();
 });
 
 /// http://javascriptkit.com/javatutors/touchevents2.shtml
