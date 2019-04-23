@@ -6,8 +6,6 @@
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
-    width: 100%;
-    height: auto;
     background: {
       color: #f4f5f7;
       size: contain;
@@ -37,8 +35,6 @@
   .content {
     text-align: center;
     padding: 20px;
-    width: 100%;
-    height: auto;
 
     h5 {
       color: $primary;
@@ -65,8 +61,6 @@
     margin: 0 10px;
     border-bottom: 1px solid #2a2a2a;
     position: relative;
-    width: 100%;
-    height: auto;
 
     &::before {
       content: "";
@@ -81,8 +75,6 @@
 
   .actions {
     padding: 15px 10px 10px 10px;
-    width: 100%;
-    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
