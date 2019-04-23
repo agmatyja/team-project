@@ -33,10 +33,11 @@
       margin: 0px;
       padding: 0px;
       list-style: none;
+      margin-left: 3rem;
       li {
+        display: inline-block;
         margin: 0 0.5rem;
         font-weight: 600;
-        display: inline-block;
         a {
           color: rgb(42, 42, 42);
           position: relative;
