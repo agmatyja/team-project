@@ -64,14 +64,17 @@ let brandReset = function () {
   }
 };
 
-document.addEventListener('DOMContentLoaded', function () {
+let brandActive = function () {
   brandReset();
   brandShow();
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  brandActive();
 });
 
 window.addEventListener('resize', function () {
-  brandReset();
-  brandShow();
+  brandActive();
 });
 
 let brandMoveLeft = function (items) {
@@ -115,12 +118,12 @@ let brandMoveRight = function (items) {
 };
 
 brandPrev.addEventListener('click', function () {
-  let countItem = brandCount();
+  const countItem = brandCount();
   brandMoveLeft(countItem);
 });
 
 brandNext.addEventListener('click', function () {
-  let countItem = brandCount();
+  const countItem = brandCount();
   brandMoveRight(countItem);
 });
 
