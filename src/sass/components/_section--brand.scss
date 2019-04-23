@@ -18,7 +18,10 @@
     .photos {
       display: flex;
       flex-direction: row;
+      <<<<<<<HEAD
       justify-content: space-around;
+      =======justify-content: space-between;
+      >>>>>>>WDP190404-30
       flex-wrap: nowrap;
 
       img {
