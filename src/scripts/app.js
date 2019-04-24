@@ -26,18 +26,18 @@ window.addEventListener('load', function () {
 });
 
 window.addEventListener('load', function () {
-  const thumbnails = document.getElementsByClassName('thumb');
+  const thumbnails = document.getElementsByClassName('featured-thumb');
 
   function myTabClicks (tabClickEvent) {
     for (let i = 0; i < thumbnails.length; i++) {
-      thumbnails[i].classList.remove('thumb-active');
+      thumbnails[i].classList.remove('featured-thumb-active');
     }
 
     const clickedThumb = tabClickEvent.currentTarget;
-    clickedThumb.classList.add('thumb-active');
+    clickedThumb.classList.add('featured-thumb-active');
     tabClickEvent.preventDefault();
 
-    const bigPhoto = document.getElementsByClassName('bigPhoto');
+    const bigPhoto = document.getElementsByClassName('featured-bigPhoto');
     for (let i = 0; i < bigPhoto.length; i++) {
       bigPhoto[i].classList.remove('active');
     }
@@ -130,55 +130,229 @@ window.addEventListener('load', function () {
 });
 
 // thumbnails animation
+window.addEventListener('load', function () {
+  const thumbPrev = document.querySelector('.thumbnails .prev');
+  const thumbNext = document.querySelector('.thumbnails .next');
+  const thumb = document.querySelector('.thumbnails-list');
 
-const thumbPrev = document.querySelector('.thumbnails .prev');
-const thumbNext = document.querySelector('.thumbnails .next');
-const thumb = document.querySelector('.thumbnails-list');
-
-let thumbMoveLeft = function (items) {
-  for (let k = 0; k < items; k++) {
-    for (let i = 1; i < thumb.children.length; i++) {
-      if (
-        thumb.children[i - 1].classList.value !== 'active' &&
-        thumb.children[i].classList.value === 'active'
-      ) {
-        thumb.children[i - 1].classList.add('active');
-        for (let j = 1; j < thumb.children.length; j++) {
-          if (thumb.children[thumb.children.length - j].classList.value === 'active') {
-            thumb.children[thumb.children.length - j].classList.remove('active');
-            break;
+  let thumbMoveLeft = function (items) {
+    for (let k = 0; k < items; k++) {
+      for (let i = 1; i < thumb.children.length; i++) {
+        if (
+          thumb.children[i - 1].classList.value !== 'active' &&
+          thumb.children[i].classList.value === 'active'
+        ) {
+          thumb.children[i - 1].classList.add('active');
+          for (let j = 1; j < thumb.children.length; j++) {
+            if (
+              thumb.children[thumb.children.length - j].classList.value === 'active'
+            ) {
+              thumb.children[thumb.children.length - j].classList.remove('active');
+              break;
+            }
           }
+          break;
         }
-        break;
       }
     }
-  }
-};
+  };
 
-let thumbMoveRight = function (items) {
-  for (let k = 0; k < items; k++) {
-    for (let i = 0; i < thumb.children.length - 1; i++) {
-      if (
-        thumb.children[i].classList.value === 'active' &&
-        thumb.children[i + 1].classList.value !== 'active'
-      ) {
-        thumb.children[i + 1].classList.add('active');
-        for (let j = 0; j < thumb.children.length; j++) {
-          if (thumb.children[j].classList.value === 'active') {
-            thumb.children[j].classList.remove('active');
-            break;
+  let thumbMoveRight = function (items) {
+    for (let k = 0; k < items; k++) {
+      for (let i = 0; i < thumb.children.length - 1; i++) {
+        if (
+          thumb.children[i].classList.value === 'active' &&
+          thumb.children[i + 1].classList.value !== 'active'
+        ) {
+          thumb.children[i + 1].classList.add('active');
+          for (let j = 0; j < thumb.children.length; j++) {
+            if (thumb.children[j].classList.value === 'active') {
+              thumb.children[j].classList.remove('active');
+              break;
+            }
           }
+          break;
         }
-        break;
       }
     }
-  }
-};
+  };
 
-thumbPrev.addEventListener('click', function () {
-  thumbMoveLeft(6);
+  thumbPrev.addEventListener('click', function () {
+    thumbMoveLeft(6);
+  });
+
+  thumbNext.addEventListener('click', function () {
+    thumbMoveRight(6);
+  });
 });
 
-thumbNext.addEventListener('click', function () {
-  thumbMoveRight(6);
+// thumbnails top seller animation
+window.addEventListener('load', function () {
+  const thumbPrev = document.querySelector('#tab2 .thumbnails .prev');
+  const thumbNext = document.querySelector('#tab2 .thumbnails .next');
+  const thumb = document.querySelector('#tab2 .thumbnails-list');
+
+  let thumbMoveLeft = function (items) {
+    for (let k = 0; k < items; k++) {
+      for (let i = 1; i < thumb.children.length; i++) {
+        if (
+          thumb.children[i - 1].classList.value !== 'active' &&
+          thumb.children[i].classList.value === 'active'
+        ) {
+          thumb.children[i - 1].classList.add('active');
+          for (let j = 1; j < thumb.children.length; j++) {
+            if (
+              thumb.children[thumb.children.length - j].classList.value === 'active'
+            ) {
+              thumb.children[thumb.children.length - j].classList.remove('active');
+              break;
+            }
+          }
+          break;
+        }
+      }
+    }
+  };
+
+  let thumbMoveRight = function (items) {
+    for (let k = 0; k < items; k++) {
+      for (let i = 0; i < thumb.children.length - 1; i++) {
+        if (
+          thumb.children[i].classList.value === 'active' &&
+          thumb.children[i + 1].classList.value !== 'active'
+        ) {
+          thumb.children[i + 1].classList.add('active');
+          for (let j = 0; j < thumb.children.length; j++) {
+            if (thumb.children[j].classList.value === 'active') {
+              thumb.children[j].classList.remove('active');
+              break;
+            }
+          }
+          break;
+        }
+      }
+    }
+  };
+
+  thumbPrev.addEventListener('click', function () {
+    thumbMoveLeft(6);
+  });
+
+  thumbNext.addEventListener('click', function () {
+    thumbMoveRight(6);
+  });
+});
+
+// thumbnails sale off animation
+window.addEventListener('load', function () {
+  const thumbPrev = document.querySelector('#tab3 .thumbnails .prev');
+  const thumbNext = document.querySelector('#tab3 .thumbnails .next');
+  const thumb = document.querySelector('#tab3 .thumbnails-list');
+
+  let thumbMoveLeft = function (items) {
+    for (let k = 0; k < items; k++) {
+      for (let i = 1; i < thumb.children.length; i++) {
+        if (
+          thumb.children[i - 1].classList.value !== 'active' &&
+          thumb.children[i].classList.value === 'active'
+        ) {
+          thumb.children[i - 1].classList.add('active');
+          for (let j = 1; j < thumb.children.length; j++) {
+            if (
+              thumb.children[thumb.children.length - j].classList.value === 'active'
+            ) {
+              thumb.children[thumb.children.length - j].classList.remove('active');
+              break;
+            }
+          }
+          break;
+        }
+      }
+    }
+  };
+
+  let thumbMoveRight = function (items) {
+    for (let k = 0; k < items; k++) {
+      for (let i = 0; i < thumb.children.length - 1; i++) {
+        if (
+          thumb.children[i].classList.value === 'active' &&
+          thumb.children[i + 1].classList.value !== 'active'
+        ) {
+          thumb.children[i + 1].classList.add('active');
+          for (let j = 0; j < thumb.children.length; j++) {
+            if (thumb.children[j].classList.value === 'active') {
+              thumb.children[j].classList.remove('active');
+              break;
+            }
+          }
+          break;
+        }
+      }
+    }
+  };
+
+  thumbPrev.addEventListener('click', function () {
+    thumbMoveLeft(6);
+  });
+
+  thumbNext.addEventListener('click', function () {
+    thumbMoveRight(6);
+  });
+});
+
+// thumbnails top rated animation
+window.addEventListener('load', function () {
+  const thumbPrev = document.querySelector('#tab4 .thumbnails .prev');
+  const thumbNext = document.querySelector('#tab4 .thumbnails .next');
+  const thumb = document.querySelector('#tab4 .thumbnails-list');
+
+  let thumbMoveLeft = function (items) {
+    for (let k = 0; k < items; k++) {
+      for (let i = 1; i < thumb.children.length; i++) {
+        if (
+          thumb.children[i - 1].classList.value !== 'active' &&
+          thumb.children[i].classList.value === 'active'
+        ) {
+          thumb.children[i - 1].classList.add('active');
+          for (let j = 1; j < thumb.children.length; j++) {
+            if (
+              thumb.children[thumb.children.length - j].classList.value === 'active'
+            ) {
+              thumb.children[thumb.children.length - j].classList.remove('active');
+              break;
+            }
+          }
+          break;
+        }
+      }
+    }
+  };
+
+  let thumbMoveRight = function (items) {
+    for (let k = 0; k < items; k++) {
+      for (let i = 0; i < thumb.children.length - 1; i++) {
+        if (
+          thumb.children[i].classList.value === 'active' &&
+          thumb.children[i + 1].classList.value !== 'active'
+        ) {
+          thumb.children[i + 1].classList.add('active');
+          for (let j = 0; j < thumb.children.length; j++) {
+            if (thumb.children[j].classList.value === 'active') {
+              thumb.children[j].classList.remove('active');
+              break;
+            }
+          }
+          break;
+        }
+      }
+    }
+  };
+
+  thumbPrev.addEventListener('click', function () {
+    thumbMoveLeft(6);
+  });
+
+  thumbNext.addEventListener('click', function () {
+    thumbMoveRight(6);
+  });
 });
