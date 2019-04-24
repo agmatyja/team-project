@@ -1,0 +1,36 @@
+.section--brand {
+  .row {
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 2rem;
+
+    .fas {
+      background: $text-color;
+      color: $text-color-hover;
+      padding: 25px;
+      text-align: center;
+
+      &:hover {
+        background: $primary;
+      }
+    }
+
+    .photos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+
+      img {
+        display: none;
+        object-fit: fill;
+        height: 50px;
+        border: 1px solid lighten($footer-bg, 50%);
+      }
+
+      .active {
+        display: block;
+      }
+    }
+  }
+}
