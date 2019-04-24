@@ -29,6 +29,9 @@
 
   .menu {
     text-align: center;
+    .tab {
+      width: 50px;
+    }
     ul {
       margin: 0;
       padding: 0;
@@ -57,12 +60,6 @@
             }
           }
         }
-      }
-    }
-    .tab-content {
-      display: none;
-      .show {
-        display: block;
       }
     }
   }
@@ -94,4 +91,12 @@
       }
     }
   }
+}
+
+#first,
+#second {
+  margin-top: 20px;
+  border: 0px solid white;
+  display: flex;
+  flex-direction: row;
 }
