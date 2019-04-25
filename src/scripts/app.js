@@ -75,9 +75,130 @@ let brandMoveRight = function (items) {
 };
 
 brandPrev.addEventListener('click', function () {
-  brandMoveLeft(6);
+  const countItem = brandCount();
+  brandMoveLeft(countItem);
 });
 
 brandNext.addEventListener('click', function () {
-  brandMoveRight(6);
+  const countItem = brandCount();
+  brandMoveRight(countItem);
+});
+
+let brandCount = function () {
+  const width = window.outerWidth;
+  if (width <= 400) {
+    return 1;
+  } else if (width <= 600) {
+    return 2;
+  } else if (width <= 768) {
+    return 3;
+  } else if (width <= 990) {
+    return 4;
+  } else if (width <= 1000) {
+    return 5;
+  } else if (width > 1000) {
+    return 6;
+  }
+};
+
+let brandShow = function () {
+  let countItem = brandCount();
+  for (let i = 0; i < brand.children.length && i < countItem; i++) {
+    brand.children[i].classList.add('active');
+  }
+};
+
+let brandReset = function () {
+  for (let i = 0; i < brand.children.length; i++) {
+    brand.children[i].classList.remove('active');
+  }
+};
+
+let brandActive = function () {
+  brandReset();
+  brandShow();
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  brandActive();
+});
+
+window.addEventListener('resize', function () {
+  brandActive();
+});
+
+/// http://javascriptkit.com/javatutors/touchevents2.shtml
+function swipedetect (el, callback) {
+  let touchsurface = el;
+  let swipedir;
+  let startX;
+  let startY;
+  let distX;
+  let distY;
+  let threshold = 150;
+  // required min distance traveled to be considered swipe
+  let restraint = 100;
+  // maximum distance allowed at the same time in perpendicular direction
+  let allowedTime = 300;
+  // maximum time allowed to travel that distance
+  let elapsedTime;
+  let startTime;
+  let handleswipe = callback || function (swipedir) {};
+  touchsurface.addEventListener(
+    'touchstart',
+    function (e) {
+      let touchobj = e.changedTouches[0];
+      swipedir = 'none';
+      startX = touchobj.pageX;
+      startY = touchobj.pageY;
+      startTime = new Date().getTime(); // record time when finger first makes contact with surface
+      e.preventDefault();
+    },
+    { passive: false },
+    false
+  );
+
+  touchsurface.addEventListener(
+    'touchmove',
+    function (e) {
+      e.preventDefault(); // prevent scrolling when inside DIV
+    },
+    { passive: false },
+    false
+  );
+
+  touchsurface.addEventListener(
+    'touchend',
+    function (e) {
+      let touchobj = e.changedTouches[0];
+      distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
+      distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
+      elapsedTime = new Date().getTime() - startTime; // get time elapsed
+      if (elapsedTime <= allowedTime) {
+        // first condition for awipe met
+        if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+          // 2nd condition for horizontal swipe met
+          swipedir = distX < 0 ? 'left' : 'right'; // if dist traveled is negative, it indicates left swipe
+        } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) {
+          // 2nd condition for vertical swipe met
+          swipedir = distY < 0 ? 'up' : 'down'; // if dist traveled is negative, it indicates up swipe
+        }
+      }
+      handleswipe(swipedir);
+      // e.preventDefault();
+    },
+    { passive: true },
+    false
+  );
+}
+
+swipedetect(brand, function (swipedir) {
+  if (swipedir === 'left') {
+    let countItem = brandCount();
+    brandMoveLeft(countItem);
+  }
+  if (swipedir === 'right') {
+    let countItem = brandCount();
+    brandMoveRight(countItem);
+  }
 });
