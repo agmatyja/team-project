@@ -27,13 +27,13 @@
 
   textarea {
     height: 160px;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
   }
 
   input {
     height: 45px;
-    width: 39%;
+    width: 100%;
     padding: 10px;
     margin-right: 20px;
   }
@@ -42,5 +42,6 @@
     background-color: black;
     color: white;
     border: none;
+    width: 100%;
   }
 }
