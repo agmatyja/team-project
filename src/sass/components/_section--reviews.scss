@@ -20,9 +20,13 @@
     margin-bottom: 0;
   }
 
-  .icon {
-    color: $primary;
+  .stars {
+    color: black;
     display: inline-block;
+  }
+
+  .stars:active {
+    color: $primary;
   }
 
   textarea {
