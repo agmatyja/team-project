@@ -6,11 +6,13 @@
       background-color: #ffffff;
       border: 1px solid #e1e1e1;
       margin-bottom: 2rem;
+      margin-left: 1rem;
       display: inline-block;
 
       .photo {
         position: relative;
         height: 280px;
+        padding: 80% 10px 0 10px;
         background: {
           size: cover;
           position: center;
