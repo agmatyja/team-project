@@ -1,175 +1,68 @@
-.section--promotion {
-  .promotion-box {
-    background-color: #ffffff;
-    position: relative;
-    display: inline-block;
-    visibility: hidden;
+.promotion-box {
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  height: 420px;
+  position: relative;
 
-    &.tns-slide-active {
-      visibility: visible;
-    }
-
-    .photo {
-      max-height: 300px;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  }
-
-  .slider-promotion {
-    .f1 {
-      background-image: url("/images/promotion/Sofa_small.jpg");
-    }
-
-    .f2 {
-      background-image: url("/images/promotion/bed_small.jpg");
-    }
-
-    .f3 {
-      background-image: url("/images/promotion/Sofa_small2.jpg");
-    }
-
-    .time {
-      text-align: center;
-      padding: 20px 0;
-    }
-  }
-
-  .slider-promotion-1 {
-    .f1 {
-      background-image: url("/images/promotion/Sofa_small.jpg");
-    }
-
-    .f2 {
-      background-image: url("/images/promotion/bed_small.jpg");
-    }
-
-    .f3 {
-      background-image: url("/images/promotion/Sofa_small2.jpg");
-    }
-  }
-
-  .active {
-    color: #292929;
-  }
-
-  .dots {
-    border-radius: 50%;
-    color: $primary;
-  }
-
-  .description {
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 60%;
-    color: white;
-    font-weight: 800;
-    p {
-      display: block;
-    }
-  }
-
-  .slider-button {
-    display: inline-block;
+  .photo-main {
+    height: 100%;
   }
 
   .hero {
-    height: 280px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding-top: 80px;
-  }
-
-  .carousel-indicators {
+    display: flex;
+    flex-direction: column;
     color: #ffffff;
-    background-color: #000000;
-    width: 50%;
-    .active {
-      background-color: $primary;
-    }
-  }
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    background: rgba(116, 114, 114, 0.5);
+    width: 86%;
+    height: 86%;
 
-  .panel-bar {
-    margin: 0 10px;
-  }
-
-  .tns-nav-active > a {
-    background-color: #d58e32 !important;
-    color: #d58e32;
-  }
-
-  .prom-1-car {
-    .slider-promotion-dots {
-      background: #000000;
-      z-index: 1000;
-      height: 24px;
-      border-radius: 0;
-
-      h5 {
-        color: white;
-        float: left;
-        padding-left: 10px;
-        display: inline-block;
-      }
-
-      ul {
-        display: block;
-        float: right;
-        padding-right: 10px;
-        display: inline-block;
-        background: transparent;
-        transform: none;
-      }
-    }
-
-    .tns-controls {
-      display: none;
-    }
-
-    button {
-      visibility: hidden;
-    }
-  }
-
-  @media (max-width: 992px) {
-    .prom-1-car {
-      margin-bottom: 20px;
-    }
-  }
-
-  .prom-2-car {
-    .tns-nav {
-      display: none;
-    }
-
-    .tns-controls {
-      display: block;
-    }
-
-    .buttons {
+    .description {
       display: flex;
-      button {
-        height: 20px;
-        background: black;
-        color: white;
-        text-align: center;
-        border: 1px solid white;
-        line-height: 20px;
-        width: 50%;
-        &:hover {
-          background: $primary;
-          border-color: $primary;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      padding-bottom: 10%;
+      padding-left: 5%;
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins";
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 40px;
+
+        &:nth-child(1) {
+          line-height: 17px;
+          span {
+            font-weight: 600;
+            font-size: 22px;
+          }
+        }
+
+        &:nth-child(3) span {
+          font-weight: 600;
+          padding: 0 10px;
+          border: 2px solid #ffffff;
+          font-size: 28px;
         }
       }
     }
   }
 
-  @media (max-width: 576px) {
-    .mobile {
-      display: none;
+  .photo-second {
+    height: 195px;
+
+    &:nth-child(1) {
+      margin-bottom: 30px;
     }
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
   }
 }
