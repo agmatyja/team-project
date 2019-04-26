@@ -6,11 +6,25 @@
   .post-box {
     margin-bottom: 2rem;
     display: inline-block;
+    display: block;
+    color: #212529;
+
+    &:hover {
+      text-decoration: none;
+      color: #212529;
+      h5 {
+        color: $primary;
+      }
+
+      .more .btn-main {
+        background-color: $primary;
+      }
+    }
 
     .cover {
       padding: 70% 25px 0 25px;
       background: {
-        size: cover;
+        size: auto;
         position: center;
         color: #f4f5f7;
       }
@@ -58,4 +72,8 @@
       }
     }
   }
+}
+
+.tns-inner {
+  overflow: hidden;
 }

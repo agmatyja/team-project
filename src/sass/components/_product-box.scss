@@ -1,82 +1,137 @@
-.product-box {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
+.section--products {
+  .slider-products {
+    flex-wrap: nowrap;
 
-  .photo {
-    position: relative;
-    padding: 80% 10px 0 10px;
-    background: {
-      color: #f4f5f7;
-      size: contain;
-      position: center;
-      repeat: no-repeat;
-    }
-    overflow: hidden;
-    align-items: flex-end;
+    .product-box {
+      background-color: #ffffff;
+      border: 1px solid #e1e1e1;
+      margin-bottom: 2rem;
+      margin-left: 1rem;
+      display: inline-block;
 
-    .sale {
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #292929;
-      border-radius: 50%;
-      color: #ffffff;
-      padding: 30px 15px 5px 15px;
-    }
+      .photo {
+        position: relative;
+        height: 280px;
+        padding: 80% 10px 0 10px;
+        background: {
+          size: cover;
+          position: center;
+          repeat: no-repeat;
+        }
+        overflow: hidden;
+        align-items: flex-end;
 
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
+        .sale {
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #292929;
+          border-radius: 50%;
+          color: #ffffff;
+          padding: 30px 15px 5px 15px;
+        }
 
-  .content {
-    text-align: center;
-    padding: 20px;
+        .buttons {
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          display: flex;
+          visibility: hidden;
+          justify-content: space-between;
+        }
+      }
 
-    h5 {
-      color: $primary;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 1px;
-    }
+      &:hover {
+        .photo .buttons {
+          visibility: visible;
+        }
 
-    .stars {
-      a {
-        text-decoration: none;
-        color: rgb(42, 42, 42);
-        @extend .far;
-        @extend .fa-star;
+        .price .btn-main-small {
+          background-color: $primary;
+        }
+      }
 
-        &.full {
-          @extend .fas;
+      .content {
+        text-align: center;
+        padding: 20px;
+
+        h5 {
+          color: $primary;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 1px;
+        }
+
+        .stars {
+          a {
+            text-decoration: none;
+            color: rgb(42, 42, 42);
+            @extend .far;
+            @extend .fa-star;
+
+            &.full {
+              @extend .fas;
+            }
+          }
+        }
+      }
+
+      .line {
+        margin: 0 10px;
+        border-bottom: 1px solid #2a2a2a;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          left: 50%;
+          width: 30px;
+          border-bottom: 4px solid $primary;
+          transform: translateX(-50%);
+        }
+      }
+
+      .actions {
+        padding: 15px 10px 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .active {
+          background: $primary;
+          color: $white;
+          border-color: $primary;
         }
       }
     }
-  }
 
-  .line {
-    margin: 0 10px;
-    border-bottom: 1px solid #2a2a2a;
-    position: relative;
+    .price-old {
+      display: block;
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      left: 50%;
-      width: 30px;
-      border-bottom: 4px solid $primary;
-      transform: translateX(-50%);
+      .text-main-small {
+        @extend .btn-main-small;
+        font-size: 16px;
+        font-weight: 200;
+        color: $text-color-light;
+        background-color: transparent;
+        text-decoration-line: line-through;
+        text-decoration-color: $text-color;
+      }
+    }
+
+    .no-exist {
+      display: none;
     }
   }
 
-  .actions {
-    padding: 15px 10px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .tns-controls {
+    display: none;
+  }
+
+  .tns-nav-active > a {
+    background-color: #d58e32 !important;
+    color: #d58e32;
   }
 }
