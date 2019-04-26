@@ -1,7 +1,7 @@
 .section--featured {
   padding-top: 2rem;
 
-  .promotion-box {
+  .featured-box {
     background-color: #ffffff;
     position: relative;
     display: inline-block;
@@ -18,7 +18,7 @@
     }
   }
 
-  .slider-promotion {
+  .slider-featured {
     .f1 {
       background-image: url("/images/promotion/Sofa_small.jpg");
     }
@@ -37,7 +37,7 @@
     }
   }
 
-  .slider-promotion-1 {
+  .slider-featured-1 {
     .f1 {
       background-image: url("/images/promotion/Sofa_small.jpg");
     }
@@ -105,7 +105,7 @@
   }
 
   .prom-1-car {
-    .slider-promotion-dots {
+    .slider-featured-dots {
       background: #000000;
       z-index: 1000;
       height: 24px;

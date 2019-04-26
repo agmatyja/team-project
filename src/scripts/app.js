@@ -3,8 +3,8 @@ import { tns } from './tiny-slider.js';
 document.addEventListener('DOMContentLoaded', function () {
   tns({
     items: 1,
-    container: '.slider-promotion',
-    navContainer: '.slider-promotion-dots > ul',
+    container: '.slider-featured',
+    navContainer: '.slider-featured-dots > ul',
     mouseDrag: true,
     speed: 0,
     autoplay: true,
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   tns({
     items: 1,
-    container: '.slider-promotion-1',
+    container: '.slider-featured-1',
     swipeAngle: false,
     speed: 0,
     mouseDrag: true,
