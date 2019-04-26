@@ -119,23 +119,54 @@ header {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
     background-color: #ffffff;
 
+    @media (max-width: $maxMedium) {
+      .container {
+        padding: 0;
+      }
+    }
+
     .container > .row {
       height: 84px;
+      @media (max-width: $maxMedium) {
+        flex-direction: column-reverse;
+        height: 110px;
+      }
+
+      @media (max-width: $maxSmall) {
+        flex-direction: row;
+        padding: 10px;
+        width: 100%;
+      }
     }
 
     .menu {
       display: flex;
       align-self: stretch;
+      @media (max-width: $maxMedium) {
+        margin-bottom: 5px;
+      }
+
+      @media (max-width: $maxSmall) {
+        width: 100%;
+      }
 
       ul {
         margin: 0;
         padding: 0;
         display: flex;
+        @media (max-width: $maxSmall) {
+          flex-direction: column;
+          height: 110px;
+          width: 100%;
+        }
 
         li {
           list-style: none;
           display: flex;
           align-items: stretch;
+          @media (max-width: $maxSmall) {
+            width: 100%;
+          }
 
           a {
             color: $text-color;
@@ -149,6 +180,13 @@ header {
             font-weight: 500;
             letter-spacing: 1px;
             @extend %hover-background-animation;
+
+            @media (max-width: $maxSmall) {
+              width: 100%;
+              justify-content: center;
+              background: #ffffff;
+              z-index: 10;
+            }
 
             &:hover,
             &.active {
@@ -166,7 +204,13 @@ header {
       display: inline-flex;
       height: 45px;
       color: $text-color;
-
+      @media (max-width: $maxSmall) {
+        display: flex;
+        border: none;
+        flex-direction: column;
+        width: 90%;
+        height: 90px;
+      }
       .category {
         border-right: 1px solid $form-border-color;
         display: flex;
@@ -186,6 +230,12 @@ header {
               color: $form-border-color;
             }
           }
+        }
+
+        @media (max-width: $maxSmall) {
+          justify-content: center;
+          height: 45px;
+          border: 1px solid $form-border-color;
         }
 
         i:first-child {
@@ -267,12 +317,21 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+        @media (max-width: $maxSmall) {
+          justify-content: center;
+          height: 45px;
+          border: 1px solid $form-border-color;
+          border-top: none;
+        }
 
         input {
           border: 0;
           padding-left: 10px;
           font-size: 14px;
           outline: none;
+          @media (max-width: $maxSmall) {
+            width: 90%;
+          }
 
           &::placeholder {
             color: $text-color;
@@ -283,6 +342,34 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
+        }
+      }
+    }
+
+    .menu-switch {
+      display: none;
+    }
+
+    label {
+      display: none;
+    }
+
+    @media (max-width: $maxSmall) {
+      label {
+        display: block;
+      }
+
+      .menu-switch {
+        & ~ .menu {
+          padding: 10px;
+        }
+
+        &:checked ~ .menu {
+          display: flex;
+        }
+
+        &:not(:checked) ~ .menu {
+          display: none;
         }
       }
     }
