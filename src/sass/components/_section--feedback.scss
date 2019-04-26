@@ -1,6 +1,6 @@
 .section--feedback {
   justify-content: center;
-  padding-bottom: 2rem;
+  padding-bottom: $section-bottom-space;
 
   .box-feedback {
     display: none;
