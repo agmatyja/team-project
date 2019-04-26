@@ -2,7 +2,7 @@
   <div class="top-bar">
     <div class="container">
       <div class="row">
-        <div class="col text-left">
+        <div class="col-7 text-left">
           <ul>
             <li>
               <a href="#">USD <i class="fas fa-caret-down"></i></a>
@@ -15,7 +15,7 @@
             </li>
           </ul>
         </div>
-        <div class="col text-right">
+        <div class="col-5 text-right">
           <ul>
             <li>
               <a href="#"
@@ -113,7 +113,7 @@
         <div class="col text-left phone-number">
           <p><i class="fas fa-mobile-alt"></i> 2345 - 3560 - 222</p>
         </div>
-        <div class="col text-center">
+        <div class="col text-center logo">
           <a href="#"><img src="./images/logo.png"/></a>
         </div>
         <div class="col text-right cart">
@@ -132,9 +132,32 @@
           <form action="" class="search-form">
             <div class="category">
               <i class="fas fa-list-ul"></i>
-              <select name="" id="">
-                <option value="">Select a category</option>
-              </select>
+              <div class="category-list" name="selectCategory" id="selectCategory">
+                <span>Select category</span>
+                <ul>
+                  <li>Kategoria 2</li>
+                  <li>Kategjhjkhljjhlhlhljhlhoria 3</li>
+                  <li>
+                    Kategoria 4
+                    <ul>
+                      <li>Kategoria 21</li>
+                      <li>
+                        Kategoria 21
+                        <ul>
+                          <li>Kategoria 3</li>
+                          <li>Kategoria 3</li>
+                          <li>Kategoria 3</li>
+                          <li>Kategoria 3</li>
+                        </ul>
+                      </li>
+                      <li>Kategoria 21</li>
+                      <li>Kategoria 21</li>
+                    </ul>
+                  </li>
+                  <li>Kategoria 5</li>
+                  <li>Kategoria 6</li>
+                </ul>
+              </div>
               <i class="fas fa-caret-down"></i>
             </div>
             <div class="search-field">
@@ -143,6 +166,8 @@
             </div>
           </form>
         </div>
+        <label for="menuSwitch"><i class="fas fa-bars"></i></label>
+        <input class="menu-switch" id="menuSwitch" type="checkbox" value="false" />
         <div class="col-auto menu">
           <ul>
             <li><a href="#" class="active">Home</a></li>
