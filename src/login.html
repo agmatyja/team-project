@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./sass/style.scss" />
+  </head>
+
+  <body>
+    <module href="./src/partials/10_header.html"></module>
+    <div class="container">
+      <form id="login" action="" method="POST">
+        <div class="header">
+          <h3>Log in</h3>
+          <p>Enter your email address and password to log in.</p>
+        </div>
+        <div class="break"></div>
+        <div class="inputs">
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail address"
+            autofocus
+            required=""
+            value=""
+          />
+          <input
+            type="password"
+            name="user-password"
+            placeholder="Password"
+            required=""
+            value=""
+          />
+          <div class="remember">
+            <p>Forgot your password?</p>
+            <input type="checkbox" name="check" id="check" value="1" />
+            <label class="forgot">Remember me</label>
+          </div>
+          <button class="btn-main" type="submit">Enter</button>
+        </div>
+      </form>
+    </div>
+    <module href="./src/partials/90_footer.html"></module>
+
+    <script src="./scripts/bootstrap.min.js"></script>
+  </body>
+</html>

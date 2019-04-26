@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./sass/style.scss" />
+  </head>
+
+  <body>
+    <module href="./src/partials/10_header.html"></module>
+    <div class="container">
+      <form id="register" action="" method="POST">
+        <div class="header">
+          <h3>Sign in</h3>
+          <p>
+            Create profile. When you create a profile, you get more from our website
+          </p>
+        </div>
+        <div class="break"></div>
+        <div class="inputs">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            autofocus
+            required=""
+            value=""
+          />
+          <input
+            type="text"
+            name="surname"
+            placeholder="Surname"
+            autofocus
+            required=""
+            value=""
+          />
+          <input
+            type="email"
+            name="useremail"
+            placeholder="E-mail address"
+            autofocus
+            required=""
+            value=""
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Re-enter e-mail address"
+            autofocus
+            required=""
+            value=""
+          />
+          <input
+            type="password"
+            name="user-password"
+            placeholder="Password"
+            required=""
+            value=""
+          />
+          <input
+            type="password"
+            name="user-password"
+            placeholder="Repeat"
+            required=""
+            value=""
+          />
+          <input
+            type="number"
+            name="user-phone"
+            placeholder="Phone number"
+            required=""
+            value=""
+          />
+          <div class="accept">
+            <input type="checkbox" name="check" id="check" value="1" />
+            <label class="accept"
+              >I agree that Furniture shop saves my personal information and agree to
+              the Furniture shop privacy policy</label
+            >
+          </div>
+          <button class=".btn-main" type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+    <module href="./src/partials/90_footer.html"></module>
+
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
