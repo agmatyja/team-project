@@ -3,6 +3,30 @@ import { tns } from './tiny-slider.js';
 document.addEventListener('DOMContentLoaded', function () {
   tns({
     items: 1,
+    container: '.slider-featured',
+    navContainer: '.slider-featured-dots > ul',
+    mouseDrag: true,
+    speed: 0,
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplayTimeout: 3000,
+    autoplayText: ['▶', '❚❚'],
+    controlsText: ['<', '>']
+  });
+
+  tns({
+    items: 1,
+    container: '.slider-featured-1',
+    swipeAngle: false,
+    speed: 0,
+    mouseDrag: true,
+    controlsText: ['<', '>'],
+    controlsPosition: 'bottom',
+    controlsContainer: '.prom-2-car .buttons'
+  });
+
+  tns({
+    items: 1,
     responsive: {
       512: {
         items: 2
@@ -18,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     swipeAngle: false,
     speed: 400,
     mouseDrag: true,
-    navContainer: '.dots > ul'
+    navContainer: '.slider-products-dots > ul'
   });
 });
 
