@@ -10,7 +10,7 @@
     .tabs {
       display: flex;
       justify-content: space-between;
-      font-family: Arial, sans-serif;
+      font-family: $arial;
       text-transform: uppercase;
       margin: 0;
 
@@ -226,7 +226,7 @@
         border-top: 0;
 
         a {
-          background: #2a2a2a;
+          background: $text-color;
           display: flex;
           align-items: center;
           padding: 0 11px;
@@ -279,6 +279,10 @@
             position: relative;
             cursor: pointer;
             background-size: cover;
+
+            &:hover {
+              cursor: pointer;
+            }
 
             &::before {
               content: "";
@@ -572,7 +576,7 @@
     background: #e8edf7 url(../images/products/bg_right_gallery.png) no-repeat bottom
       right;
     padding: 40px;
-    font-family: Arial, sans-serif;
+    font-family: $arial;
     background-size: contain;
     height: 100%;
 
@@ -587,7 +591,7 @@
 
     .title {
       font-size: 48px;
-      color: #d58e32;
+      color: $primary;
       display: block;
     }
 
