@@ -1,5 +1,3 @@
-console.log('hello');
-
 window.addEventListener('load', function () {
   const myTabs = document.getElementsByClassName('tab');
   function myTabClicks (tabClickEvent) {
