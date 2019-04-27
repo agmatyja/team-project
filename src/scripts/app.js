@@ -44,42 +44,17 @@ document.addEventListener('DOMContentLoaded', function () {
     mouseDrag: true,
     navContainer: '.slider-products-dots > ul'
   });
-  const productBoxStars = document.querySelectorAll('.product-box .stars');
-  for (let k = 0; k < productBoxStars.length; k++) {
-    let memory;
-    let memoryClassList = [];
 
-    productBoxStars[k].addEventListener('mouseenter', function (e) {
-      for (let i = 0; i < productBoxStars[k].children.length; i++) {
-        memoryClassList.push(productBoxStars[k].children[i].classList.value);
-      }
-    });
-
-    productBoxStars[k].addEventListener('mouseleave', function (e) {
-      if (memory == null) {
-        for (let i = 0; i < productBoxStars[k].children.length; i++) {
-          productBoxStars[k].children[i].classList = memoryClassList[i];
+  const featuredBoxStars = document.querySelectorAll('.section--reviews .stars');
+  for (let k = 0; k < featuredBoxStars.length; k++) {
+    var box = featuredBoxStars[k];
+    for (let i = 0; i < box.children.length; i++) {
+      box.children[i].addEventListener('mousedown', function (e) {
+        for (let j = 0; j <= i; j++) {
+          box.children[j].className = 'fa fa-star selected';
         }
-      }
-      memoryClassList = [];
-    });
-
-    for (let i = 0; i < productBoxStars[k].children.length; i++) {
-      productBoxStars[k].children[i].addEventListener('click', function (e) {
-        memory = true;
-      });
-
-      productBoxStars[k].children[i].addEventListener('mouseenter', function (e) {
-        if (!memory) {
-          for (let j = i; j < productBoxStars[k].children.length; j++) {
-            productBoxStars[k].children[j].classList.remove('full');
-            productBoxStars[k].children[j].classList.remove('active');
-          }
-
-          for (let j = 0; j <= i; j++) {
-            productBoxStars[k].children[j].classList.add('full');
-            productBoxStars[k].children[j].classList.add('active');
-          }
+        for (let j = i + 1; j < box.children.length; j++) {
+          box.children[j].className = 'fa fa-star';
         }
       });
     }

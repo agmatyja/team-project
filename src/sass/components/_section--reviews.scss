@@ -23,10 +23,10 @@
   .stars {
     color: black;
     display: inline-block;
-  }
 
-  .stars:active {
-    color: $primary;
+    i.selected {
+      color: $primary;
+    }
   }
 
   textarea {
