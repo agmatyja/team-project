@@ -1,11 +1,19 @@
 body {
   font-family: "Poppins", sans-serif;
   padding-top: 30px;
+  background-image: url("https://images.unsplash.com/photo-1493150134366-cacb0bdc03fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+  background: {
+    repeat: no-repeat;
+    size: cover;
+  }
 
   .container {
     margin: 0 auto;
     width: 400px;
     max-width: 400px;
+    background-color: $primary;
+    border: 1px solid $form-border-color;
+    opacity: 0.8;
   }
 
   #register {
@@ -19,29 +27,32 @@ body {
     .header {
       margin-bottom: 20px;
       h3 {
-        color: grey;
+        color: $text-color;
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 5px;
+        padding-left: 25px;
       }
       p {
-        color: #ffffff;
+        color: $text-color;
         font-size: 14px;
         font-weight: 300;
+        padding-left: 25px;
       }
     }
 
     .break {
       height: 1px;
-      background-color: $primary;
+      background-color: $text-color;
       width: 400px;
-      margin: 0 -25px;
     }
 
     .inputs {
       margin-top: 25px;
+      margin-left: 25px;
+
       label {
-        color: grey;
+        color: $text-color;
         font-size: 12px;
         font-weight: 300;
         letter-spacing: 7px;
