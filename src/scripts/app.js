@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mouseDrag: true,
     navContainer: '.slider-products-dots > ul'
   });
-});
+
 
 const selectCategory = document.getElementById('selectCategory');
 selectCategory.addEventListener('click', function (event) {
@@ -54,43 +54,61 @@ selectCategory.addEventListener('click', function (event) {
   }
 });
 
-const productBoxStars = document.querySelectorAll('.product-box .stars');
-for (let k = 0; k < productBoxStars.length; k++) {
-  let memory;
-  let memoryClassList = [];
+  const productBoxStars = document.querySelectorAll('.product-box .stars');
 
-  productBoxStars[k].addEventListener('mouseenter', function (e) {
-    for (let i = 0; i < productBoxStars[k].children.length; i++) {
-      memoryClassList.push(productBoxStars[k].children[i].classList.value);
+  const productBoxStarsLoading = function (element, length, memoryArray) {
+    for (let i = 0; i < length; i++) {
+      memoryArray.push(element[i].classList.value);
     }
-  });
+  };
 
-  productBoxStars[k].addEventListener('mouseleave', function (e) {
-    if (memory == null) {
-      for (let i = 0; i < productBoxStars[k].children.length; i++) {
-        productBoxStars[k].children[i].classList = memoryClassList[i];
-      }
+  const productBoxStarsRefresh = function (element, length, memoryArray) {
+    for (let i = 0; i < length; i++) {
+      element[i].classList = memoryArray[i];
     }
-    memoryClassList = [];
-  });
+  };
 
-  for (let i = 0; i < productBoxStars[k].children.length; i++) {
-    productBoxStars[k].children[i].addEventListener('click', function (e) {
-      memory = true;
+  const productBoxStarsAdd = function (element, indexStart, length) {
+    for (let i = indexStart; i <= length; i++) {
+      element[i].classList.add('full');
+      element[i].classList.add('active');
+    }
+  };
+
+  const productBoxStarsRemove = function (element, indexStart, length) {
+    for (let i = indexStart; i < length; i++) {
+      element[i].classList.remove('full');
+      element[i].classList.remove('active');
+    }
+  };
+
+  for (let k = 0; k < productBoxStars.length; k++) {
+    let memory;
+    let memoryClassList = [];
+    const length = productBoxStars[k].children.length;
+
+    productBoxStars[k].addEventListener('mouseenter', function (e) {
+      productBoxStarsLoading(productBoxStars[k].children, length, memoryClassList);
     });
 
-    productBoxStars[k].children[i].addEventListener('mouseenter', function (e) {
-      if (!memory) {
-        for (let j = i; j < productBoxStars[k].children.length; j++) {
-          productBoxStars[k].children[j].classList.remove('full');
-          productBoxStars[k].children[j].classList.remove('active');
-        }
-
-        for (let j = 0; j <= i; j++) {
-          productBoxStars[k].children[j].classList.add('full');
-          productBoxStars[k].children[j].classList.add('active');
-        }
+    productBoxStars[k].addEventListener('mouseleave', function (e) {
+      if (memory == null) {
+        productBoxStarsRefresh(productBoxStars[k].children, length, memoryClassList);
       }
+      memoryClassList = [];
     });
+
+    for (let i = 0; i < length; i++) {
+      productBoxStars[k].children[i].addEventListener('click', function (e) {
+        memory = true;
+      });
+
+      productBoxStars[k].children[i].addEventListener('mouseenter', function (e) {
+        if (!memory) {
+          productBoxStarsRemove(productBoxStars[k].children, i, length);
+          productBoxStarsAdd(productBoxStars[k].children, 0, i);
+        }
+      });
+    }
   }
-}
+});
