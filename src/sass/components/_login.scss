@@ -7,102 +7,106 @@ body {
     size: cover;
   }
 
-  .container {
+  .loginform {
     margin: 0 auto;
     width: 400px;
     max-width: 400px;
-    background-color: $primary;
-    border: 1px solid $form-border-color;
     opacity: 0.8;
-  }
-
-  #login {
-    padding: 0 25 25 25px;
-    background-color: $text-color-light;
-    -moz-border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
     border-radius: 5px;
-    display: table;
-    position: static;
 
-    .header {
-      margin-bottom: 20px;
-      h3 {
-        color: $text-color;
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 5px;
-        padding-left: 25px;
-      }
-      p {
-        color: $text-color;
-        font-size: 14px;
-        font-weight: 300;
-        padding-left: 25px;
-      }
-    }
+    #login {
+      padding: 0 25 25 25px;
+      background-color: $text-color-light;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      display: table;
+      position: static;
 
-    .break {
-      height: 1px;
-      background-color: $text-color;
-      width: 400px;
-    }
-
-    .inputs {
-      margin-top: 25px;
-      padding-left: 25px;
-      label {
-        color: $text-color;
-        font-size: 12px;
-        font-weight: 300;
-        display: block;
-      }
-      input::-webkit-input-placeholder {
-        color: $footer-bg;
-      }
-      input::-moz-input-placeholder {
-        color: $footer-bg;
-      }
-      input[type="text"],
-      input[type="email"],
-      input[type="password"] {
-        background-color: #ffffff;
-        font-size: 0.8rem;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        border: none;
-        padding: 13 10px;
-        width: 320px;
-        margin-bottom: 20px;
-        &:focus {
-          background: #ecf0f1;
-          outline: none;
+      .header {
+        margin: 20 0px;
+        h3 {
+          color: $text-color;
+          font-size: 24px;
+          font-weight: bold;
+          margin: 10px 0px;
+          padding-left: 25px;
         }
-      }
-      .remember {
-        display: block;
-        position: static;
-        height: 25px;
-        margin-top: 10px;
-        clear: both;
-
-        input[type="checkbox"] {
-          float: left;
-          margin-right: 14px;
-          margin-top: 3px;
-        }
-
-        .forgot {
-          float: left;
+        p {
+          color: $text-color;
           font-size: 14px;
+          font-weight: 300;
+          padding-left: 25px;
+        }
+      }
+
+      .break {
+        height: 1px;
+        background-color: $primary;
+        width: 400px;
+      }
+
+      .inputs {
+        margin-top: 25px;
+        padding-left: 25px;
+        label {
+          color: $text-color;
+          font-size: 12px;
+          font-weight: 300;
+          display: block;
+        }
+        input::-webkit-input-placeholder {
+          color: $footer-bg;
+        }
+        input::-moz-input-placeholder {
+          color: $footer-bg;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          background-color: #ffffff;
+          font-size: 0.8rem;
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px;
+          border-radius: 3px;
+          border: none;
+          padding: 13 10px;
+          width: 320px;
+          margin-bottom: 20px;
+          &:focus {
+            background: #ecf0f1;
+            outline: none;
+          }
+        }
+        .remember {
+          display: block;
+          position: static;
+          height: 25px;
+          margin-top: 10px;
+          clear: both;
+
+          input[type="checkbox"] {
+            float: left;
+            margin-right: 14px;
+            margin-top: 3px;
+          }
+
+          .forgot {
+            float: left;
+            font-size: 14px;
+          }
         }
       }
 
       .btn-main {
-        width: 100%;
+        width: 400px;
         margin-top: 20px;
         padding: 15 0px;
-        color: $text-color;
+        color: #ffffff;
+        background-color: $primary;
         font-size: 14px;
         font-weight: 500;
         letter-spacing: 1px;

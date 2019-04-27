@@ -1,4 +1,5 @@
 @import "variables";
+@import "page-animations";
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
@@ -19,6 +20,9 @@
 @import "components/login";
 @import "components/register";
 
+@import "components/section--featured";
+@import "components/promotion-box";
+@import "components/section--brand";
 @import "components/section--features";
 
 body {

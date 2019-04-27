@@ -410,6 +410,18 @@ header {
         align-items: center;
         margin-right: -30px;
         margin-left: -22px;
+        #loginlink {
+          display: none;
+          &:show {
+            display: flex;
+          }
+        }
+        #registerlink {
+          display: none;
+          &:show {
+            display: flex;
+          }
+        }
         i {
           visibility: visible;
           margin-left: -70px;
