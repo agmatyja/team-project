@@ -1,79 +1,83 @@
-.posts-slider {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
+.section--blog-posts {
+  .posts-slider {
+    flex-wrap: nowrap;
 
-  .post-box {
-    margin-bottom: 2rem;
-    display: inline-block;
-    display: block;
-    color: #212529;
-
-    &:hover {
-      text-decoration: none;
+    .post-box {
+      margin-bottom: 2rem;
+      display: inline-block;
       color: #212529;
-      h5 {
-        color: $primary;
-      }
 
-      .more .btn-main {
-        background-color: $primary;
-      }
-    }
-
-    .cover {
-      padding: 70% 25px 0 25px;
-      background: {
-        size: auto;
-        position: center;
-        color: #f4f5f7;
-      }
-
-      .details {
-        padding: 15px 20px;
-        display: flex;
-        background-color: #ffffff;
-        font-size: 14px;
-
-        & > * {
-          flex: 1 1 auto;
+      &:hover {
+        text-decoration: none;
+        color: #212529;
+        h5 {
+          color: $primary;
         }
 
-        .date {
-          text-align: left;
-        }
-
-        .comments {
-          text-align: right;
+        .more .btn-main {
+          background-color: $primary;
         }
       }
-    }
 
-    .post-info {
-      padding: 25px;
+      .cover {
+        padding: 70% 25px 0 25px;
+        background: {
+          size: auto;
+          position: center;
+          color: #f4f5f7;
+        }
 
-      h5 {
-        color: $primary;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 1px;
+        .details {
+          padding: 15px 20px;
+          display: flex;
+          background-color: #ffffff;
+          font-size: 14px;
+
+          & > * {
+            flex: 1 1 auto;
+          }
+
+          .date {
+            text-align: left;
+          }
+
+          .comments {
+            text-align: right;
+          }
+        }
       }
 
-      p {
-        font-size: 14px;
-        line-height: 24px;
-        color: rgb(103, 103, 103);
-        text-align: justify;
-      }
+      .post-info {
+        padding: 25px;
 
-      .more {
-        text-align: center;
-        padding-top: 30px;
+        h5 {
+          color: $primary;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 1px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 24px;
+          color: rgb(103, 103, 103);
+          text-align: justify;
+        }
+
+        .more {
+          text-align: center;
+          padding-top: 30px;
+        }
       }
     }
   }
-}
 
-.tns-inner {
-  overflow: hidden;
+  .tns-controls {
+    display: none;
+  }
+
+  .tns-nav-active > a {
+    background-color: #d58e32 !important;
+    color: #d58e32;
+  }
 }

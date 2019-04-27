@@ -1,6 +1,6 @@
-/* import { tns } from './tiny-slider.js';
+import { tns } from './tiny-slider.js';
 
- document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
   tns({
     items: 1,
     responsive: {
@@ -18,24 +18,23 @@
     swipeAngle: false,
     speed: 400,
     mouseDrag: true,
-    navContainer: '.dots > ul',
+    navContainer: '.dots > ul'
+  });
 
-    container: '.posts-slider',
+  tns({
     items: 1,
     responsive: {
       512: {
-        edgePadding: 20,
-        gutter: 20,
-        items: 1
-      },
-      768: {
-        gutter: 30,
         items: 2
       },
-      1024: {
+      768: {
         items: 3
+      },
+      1024: {
+        items: 4
       }
     },
+    container: '.posts-slider',
     swipeAngle: false,
     speed: 400,
     mouseDrag: true,
@@ -47,7 +46,6 @@ const selectCategory = document.getElementById('selectCategory');
 selectCategory.addEventListener('click', function (event) {
   event.stopPropagation();
   if (event.target.nodeName === 'LI') {
-    selectCategory.children[0].innerText = /. */ /* g.exec(
-  event.target.innerText
-)[0];
-*/
+    selectCategory.children[0].innerText = /.*/g.exec(event.target.innerText)[0];
+  }
+});
