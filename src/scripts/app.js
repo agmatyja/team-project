@@ -3,22 +3,26 @@ import { tns } from './tiny-slider.js';
 document.addEventListener('DOMContentLoaded', function () {
   tns({
     items: 1,
-    responsive: {
-      512: {
-        items: 2
-      },
-      768: {
-        items: 3
-      },
-      1024: {
-        items: 4
-      }
-    },
-    container: '.slider-products',
-    swipeAngle: false,
-    speed: 400,
+    container: '.slider-featured',
+    navContainer: '.slider-featured-dots > ul',
     mouseDrag: true,
-    navContainer: '.dots > ul'
+    speed: 0,
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplayTimeout: 3000,
+    autoplayText: ['▶', '❚❚'],
+    controlsText: ['<', '>']
+  });
+
+  tns({
+    items: 1,
+    container: '.slider-featured-1',
+    swipeAngle: false,
+    speed: 0,
+    mouseDrag: true,
+    controlsText: ['<', '>'],
+    controlsPosition: 'bottom',
+    controlsContainer: '.prom-2-car .buttons'
   });
 
   tns({
@@ -34,11 +38,31 @@ document.addEventListener('DOMContentLoaded', function () {
         items: 4
       }
     },
+    container: '.slider-products',
+    swipeAngle: false,
+    speed: 400,
+    mouseDrag: true,
+    navContainer: '.slider-products-dots > ul'
+  });
+
+  tns({
+    items: 1,
+    responsive: {
+      512: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1024: {
+        items: 3
+      }
+    },
     container: '.posts-slider',
     swipeAngle: false,
     speed: 400,
     mouseDrag: true,
-    navContainer: '.dots > ul'
+    navContainer: '.posts-slider-dots > ul'
   });
 });
 
