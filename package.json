@@ -8,7 +8,7 @@
     "watch": "parcel src/index.html --open --no-autoinstall --port 8080",
     "prebuild": "npm run clean",
     "build": "parcel build src/index.html",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist .cache",
     "code-quality": "npm run format && npm run lint",
     "format": "prettier --write \"src/**/*.{js,html,scss}\"",
     "lint": "eslint src/"
@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.6"
+    "popper.js": "^1.14.6",
+    "tiny-slider": "^2.8.8"
   }
 }
