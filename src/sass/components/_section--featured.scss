@@ -1,11 +1,12 @@
 .section--featured {
   padding: 5rem 0;
+  margin-bottom: -80px;
 
   .product {
     background-color: #ffffff;
     border: 1px solid #e1e1e1;
     height: 450px;
-    width: 100%;
+    width: 290px;
 
     .photo {
       padding: 80% 10px 0 10px;
@@ -18,7 +19,7 @@
           display: flex;
         }
       }
-      height: 200px;
+      height: 220px;
       width: 100%;
       position: relative;
       overflow: hidden;
@@ -33,7 +34,7 @@
         color: #f4f5f7;
         display: flex;
         justify-content: flex-start;
-        margin-top: -280px;
+        margin-top: -230px;
         margin-left: -10px;
         text-transform: uppercase;
         font-size: 15px;
@@ -52,7 +53,7 @@
           background-color: $form-border-color;
           display: inline-block;
           width: 40%;
-          margin-left: 210px;
+          margin-left: 180px;
           margin-top: 10px;
 
           ul {
@@ -91,11 +92,10 @@
 
           .btn-main-small {
             text-decoration: none;
-            margin-top: -180px;
+            margin: 0 70px;
+            margin-top: -150px;
             position: absolute;
-            margin-left: 80px;
-            margin-right: 80px;
-            width: 150px;
+            width: 140px;
             height: 40px;
             padding: 10px;
             font-size: 15px;
@@ -108,11 +108,12 @@
         }
 
         .time {
-          margin: 0 40px;
+          margin: 0 30px;
           color: #ffffff;
           display: flex;
           justify-content: center;
           align-items: center;
+          z-index: 100;
           &:hover {
             display: flex;
           }
@@ -121,11 +122,12 @@
             text-decoration: none;
             border-radius: 50%;
             background-color: $form-border-color;
-            width: 50px;
-            height: 50px;
-            margin: 5px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: space-between;
             position: relative;
-            margin-top: -130px;
+            margin-top: -120px;
 
             p {
               position: absolute;
@@ -137,6 +139,7 @@
               display: flex;
               justify-content: center;
               text-transform: uppercase;
+              margin-top: 5px;
             }
           }
         }
@@ -145,11 +148,10 @@
 
     .content {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 50px;
       background-color: #ffffff;
       width: 100%;
-      height: 40px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
 
       h5 {
         color: $primary;
@@ -171,7 +173,6 @@
     }
 
     .line {
-      margin-top: -50px;
       margin: 0 10px;
       border-bottom: 1px solid #2a2a2a;
       position: relative;
@@ -189,7 +190,7 @@
 
     .actions {
       .outlines {
-        margin-top: 20px;
+        margin-top: 40px;
         height: 70px;
         margin-left: 15px;
 
@@ -212,10 +213,10 @@
       }
 
       .price {
-        margin-left: 250px;
+        margin-left: 190px;
 
         .btn-main-small {
-          margin-top: -75px;
+          margin-top: -70px;
           width: 75px;
           height: 35px;
           font-size: 14px;
@@ -227,7 +228,7 @@
   }
 
   .productpromo {
-    margin-left: 350px;
+    margin-left: 300px;
     margin-top: -450px;
     padding-top: 15px;
     height: 450px;
