@@ -103,6 +103,11 @@
           border-color: $primary;
         }
       }
+
+      .tns-nav-active > a {
+        background-color: #d58e32 !important;
+        color: #d58e32;
+      }
     }
 
     .price-old {
@@ -127,9 +132,7 @@
   .tns-controls {
     display: none;
   }
-
-  .tns-nav-active > a {
-    background-color: #d58e32 !important;
-    color: #d58e32;
-  }
+}
+.description {
+  display: inline-block;
 }
