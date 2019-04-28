@@ -21,8 +21,20 @@
   }
 
   .icon {
-    color: $primary;
+    color: black;
     display: inline-block;
+  }
+
+  .icon:hover {
+    color: $primary;
+  }
+
+  .active {
+    color: $primary;
+  }
+
+  h1 {
+    font-size: 18px;
   }
 
   textarea {
