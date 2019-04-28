@@ -1,78 +1,5 @@
 import { tns } from './tiny-slider.js';
 
-let tab1 = document.querySelector('#bed');
-
-let tab2 = document.querySelector('#chair');
-
-let tab3 = document.querySelector('#sofa');
-
-let tab4 = document.querySelector('#table');
-
-let tab5 = document.querySelector('#dining');
-
-let tabs = document.querySelectorAll('.tab');
-
-let card = document.querySelectorAll('.card');
-
-let menu = document.querySelector('.menu');
-
-let first = document.querySelector('#first');
-let second = document.querySelector('#second');
-
-tab1.addEventListener('click', function () {
-  updateCard(first);
-  updateActiveStatus(tab1);
-});
-
-tab2.addEventListener('click', function () {
-  updateCard(second);
-  updateActiveStatus(tab2);
-});
-
-tab3.addEventListener('click', function () {
-  updateCard(first);
-  updateActiveStatus(tab3);
-});
-
-tab4.addEventListener('click', function () {
-  updateCard(second);
-  updateActiveStatus(tab4);
-});
-
-tab5.addEventListener('click', function () {
-  updateCard(first);
-  updateActiveStatus(tab5);
-});
-
-function updateActiveStatus (activeItem) {
-  tabs.forEach(function (tabItem) {
-    if (tabItem !== activeItem) {
-      tabItem.classList.remove('active');
-      menu.classList.add('animation');
-    } else {
-      tabItem.classList.add('active');
-      menu.classList.add('animation');
-    }
-  });
-}
-
-function updateCard (activeItem) {
-  card.forEach(function (tabItem) {
-    if (tabItem !== activeItem) {
-      tabItem.classList.add('temp');
-    } else {
-      tabItem.classList.remove('temp');
-    }
-  });
-}
-
-var tab = document.querySelectorAll('.tab');
-console.log(tab);
-
-for (var a = 0; a < tab.length; a++) {
-  console.log(tab[a].innerText);
-}
-
 document.addEventListener('DOMContentLoaded', function () {
   tns({
     items: 1,
@@ -126,3 +53,66 @@ selectCategory.addEventListener('click', function (event) {
     selectCategory.children[0].innerText = /.*/g.exec(event.target.innerText)[0];
   }
 });
+
+(function () {
+  var tabCard = document.querySelectorAll('.tab');
+  var sliderDots = document.getElementsByClassName('slider-products-dots');
+  var productsList = document.querySelectorAll('.productsList');
+
+  function tabCheck () {
+    for (var i = 0; i < tabCard.length; i++) {
+      if (tabCard[i].classList.contains('active')) {
+        productsList[i].style.display = 'flex';
+      } else {
+        productsList[i].style.display = 'none';
+      }
+    }
+  }
+
+  tabCheck();
+
+  function dotsMaker () {
+    var elemMaker = document.createElement('li');
+    var linkMaker = document.createElement('a');
+    var child = sliderDots.appendChild(elemMaker);
+    child.appendChild(linkMaker);
+    child.setAttribute('class', 'dynamic-dots animation');
+  }
+
+  function dotsCounter () {
+    var dynamicDots = document.querySelectorAll('.dynamic-dots');
+    for (var j = 0; j < dynamicDots.length; j++) {
+      sliderDots.removeChild(dynamicDots[l]);
+    }
+  }
+
+  function dotsCheck () {
+    dotsCounter();
+    for (var k = 0; k < tabCard.length; k++) {
+      if (tabCard[k].classList.contains('active')) {
+        var productsBoxList = productsList[k].querySelectorAll('.product-box');
+        var productsBoxListLength = productsBoxList.length;
+        if (productsBoxListLength > 8) {
+          do {
+            dotsMaker();
+            productsBoxListLength -= 8;
+          } while (productsBoxListLength > 8);
+        }
+      }
+    }
+  }
+
+  dotsCheck();
+
+  for (var l = 0; l < tabCard.length; l++) {
+    tabCard[l].addEventListener('click', function () {
+      for (var l = 0; l < tabCard.length; l++) {
+        tabCard[l].classList.remove('active');
+      }
+      this.className += 'active';
+      tabCheck();
+      dotsCounter();
+      dotsCheck();
+    });
+  }
+})();
