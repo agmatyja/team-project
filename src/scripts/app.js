@@ -50,11 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var box = featuredBoxStars[k];
     for (let i = 0; i < box.children.length; i++) {
       box.children[i].addEventListener('mousedown', function (e) {
+        var box2 = featuredBoxStars[k];
         for (let j = 0; j <= i; j++) {
-          box.children[j].className = 'fa fa-star selected';
+          box2.children[j].className = 'fa fa-star selected';
         }
         for (let j = i + 1; j < box.children.length; j++) {
-          box.children[j].className = 'fa fa-star';
+          box2.children[j].className = 'fa fa-star';
         }
       });
     }
