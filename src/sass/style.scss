@@ -23,6 +23,12 @@
 @import "components/section--features";
 @import "components/section--gallery";
 
+@import "components/skeleton";
+@import "components/furniture-breadcrumbs";
+@import "components/furniture-list";
+@import "components/new-furniture";
+@import "components/newsletter";
+
 body {
   font-family: "Poppins", sans-serif;
 }
