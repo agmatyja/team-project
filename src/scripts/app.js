@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navContainer: '.slider-products-dots > ul'
   });
 
-  const featuredBoxStars = document.querySelectorAll('.section--reviews .stars');
+  const featuredBoxStars = document.querySelectorAll('.section--furniture-list .stars');
   for (let k = 0; k < featuredBoxStars.length; k++) {
     var box = featuredBoxStars[k];
     for (let i = 0; i < box.children.length; i++) {

@@ -3,9 +3,63 @@
 
   .furniture-tabs li a {
     color: $text-color;
+    display: inline-block;
 
     &.active {
       color: $primary;
     }
+  }
+
+  .btn-small {
+    background-color: white;
+    margin: 10px 5px;
+    display: inline-block;
+  }
+
+  .btn-small:hover {
+    background-color: $primary;
+    color: white;
+  }
+
+  .stars {
+    color: black;
+    display: inline-block;
+
+    i.selected {
+      color: $primary;
+    }
+  }
+
+  .no-hover {
+    text-decoration: line-through;
+    display: inline-block;
+  }
+  .price {
+    display: inline-block;
+  }
+  .outlines {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .line {
+    border-bottom: solid 1px grey;
+    margin: 20px 0;
+  }
+
+  .photo {
+    background-image: url("/images/promotion/Sofa_small.jpg");
+  }
+
+  .photo1 {
+    background-image: url("/images/promotion/bed_small.jpg");
+  }
+
+  .photo2 {
+    background-image: url("/images/promotion/Sofa_small2.jpg");
+  }
+
+  .photo3 {
+    background-image: url("/images/promotion/Sofa_small.jpg");
   }
 }
