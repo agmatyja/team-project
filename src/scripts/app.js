@@ -44,6 +44,21 @@ document.addEventListener('DOMContentLoaded', function () {
     mouseDrag: true,
     navContainer: '.slider-products-dots > ul'
   });
+
+  const featuredBoxStars = document.querySelectorAll('.section--reviews .stars');
+  for (let k = 0; k < featuredBoxStars.length; k++) {
+    var box = featuredBoxStars[k];
+    for (let i = 0; i < box.children.length; i++) {
+      box.children[i].addEventListener('mousedown', function (e) {
+        for (let j = 0; j <= i; j++) {
+          box.children[j].className = 'fa fa-star selected';
+        }
+        for (let j = i + 1; j < box.children.length; j++) {
+          box.children[j].className = 'fa fa-star';
+        }
+      });
+    }
+  }
 });
 
 const selectCategory = document.getElementById('selectCategory');

@@ -1,0 +1,51 @@
+.section--reviews {
+  .container {
+    margin: 10px;
+  }
+
+  .title {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .opinion1 {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .opinion2 {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .stars {
+    color: black;
+    display: inline-block;
+
+    i.selected {
+      color: $primary;
+    }
+  }
+
+  textarea {
+    height: 160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  input {
+    height: 45px;
+    width: 100%;
+    padding: 10px;
+    margin-right: 20px;
+  }
+
+  .btn-main {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100%;
+  }
+}
