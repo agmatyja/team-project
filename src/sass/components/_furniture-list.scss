@@ -34,9 +34,11 @@
     text-decoration: line-through;
     display: inline-block;
   }
+
   .price {
     display: inline-block;
   }
+
   .outlines {
     display: inline-block;
     margin-left: 10px;
@@ -45,6 +47,10 @@
   .line {
     border-bottom: solid 1px grey;
     margin: 20px 0;
+  }
+
+  .review-link {
+    color: $text-color;
   }
 
   .photo {
