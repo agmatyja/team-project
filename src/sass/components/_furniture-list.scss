@@ -1,12 +1,6 @@
 .section--furniture-list {
   margin: 5px 0;
 
-  .skeleton-marking {
-    /*remove when the section is ready*/
-    @extend .skeleton-marking-template;
-    min-height: 200px;
-  }
-
   .furniture-tabs li a {
     color: $text-color;
 
