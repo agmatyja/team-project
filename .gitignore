@@ -78,6 +78,9 @@ typings/
 # Serverless directories
 .serverless
 
+# DS_Store
+.DS_Store
+
 *.iml
 
 # End of https://www.gitignore.io/api/node
