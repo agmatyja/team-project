@@ -86,8 +86,12 @@
           background-color: #e1e1e1;
           @extend %hover-background-animation;
 
-          &.active,
-          &:hover {
+          @media not all and (hover: none) {
+            &:hover {
+              background-color: $primary;
+            }
+          }
+          &.active {
             background-color: $primary;
           }
         }
