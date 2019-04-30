@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     container: '.slider-products',
     swipeAngle: false,
     speed: 400,
+    gutter: 5,
     mouseDrag: true,
     navContainer: '.slider-products-dots > ul'
   });

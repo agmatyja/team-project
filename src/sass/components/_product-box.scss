@@ -1,30 +1,54 @@
-.product-box {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
+.section--products {
+  .slider-products {
+    flex-wrap: nowrap;
 
-  .photo {
-    position: relative;
-    padding: 80% 10px 0 10px;
-    background: {
-      color: #f4f5f7;
-      size: contain;
-      position: center;
-      repeat: no-repeat;
-    }
-    overflow: hidden;
-    align-items: flex-end;
+    .product-box {
+      background-color: #ffffff;
+      border: 1px solid #e1e1e1;
+      margin-bottom: 2rem;
+      display: inline-block;
 
-    .sale {
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #292929;
-      border-radius: 50%;
-      color: #ffffff;
-      padding: 30px 15px 5px 15px;
-    }
+      .photo {
+        position: relative;
+        height: 280px;
+        background: {
+          size: cover;
+          position: center;
+          repeat: no-repeat;
+        }
+        overflow: hidden;
+        align-items: flex-end;
+
+        .sale {
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #292929;
+          border-radius: 50%;
+          color: #ffffff;
+          padding: 30px 15px 5px 15px;
+        }
+
+        .buttons {
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          display: flex;
+          visibility: hidden;
+          justify-content: space-between;
+        }
+      }
+
+      &:hover {
+        .photo .buttons {
+          visibility: visible;
+        }
+
+        .price .btn-main-small {
+          background-color: $primary;
+        }
+      }
 
     .buttons {
       display: flex;
