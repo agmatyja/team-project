@@ -11,20 +11,26 @@
   <body>
     <module href="./src/partials/10_header.html"></module>
 
-    <module href="./src/partials/20_section-featured.html"></module>
+    <div class="tab-content">
+      <div
+        id="home"
+        class="tab-pane fade show active"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+      >
+        <module href="./src/partials/20_page-home.html"></module>
+      </div>
+      <div
+        id="furniture"
+        class="tab-pane fade"
+        role="tabpanel"
+        aria-labelledby="furniture-tab"
+      >
+        <module href="./src/partials/100_page-furniture.html"></module>
+      </div>
+    </div>
 
-    <module href="./src/partials/30_section-features.html"></module>
-
-    <module href="./src/partials/40_section-promotion.html"></module>
-
-    <module href="./src/partials/50_section-products.html"></module>
-
-    <module href="./src/partials/60_section_gallery.html"></module>
-
-    <module href="./src/partials/70_section-blog-posts.html"></module>
-
-    <module href="./src/partials/80_section-brand.html"></module>
-
+    <module href="./src/partials/85_section-feedback.html"></module>
     <module href="./src/partials/90_footer.html"></module>
 
     <script src="./scripts/bootstrap.min.js"></script>
@@ -32,6 +38,7 @@
       ]><script src="./scripts/tiny-slider.helper.ie8.js"></script
     ><![endif]-->
     <script src="./scripts/tiny-slider.js"></script>
+
     <script src="./scripts/app.js"></script>
   </body>
 </html>

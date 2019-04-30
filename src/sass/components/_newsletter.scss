@@ -1,0 +1,9 @@
+.section--newsletter {
+  margin: 5px 0;
+
+  .skeleton-marking {
+    /*remove when the section is ready*/
+    @extend .skeleton-marking-template;
+    min-height: 50px;
+  }
+}
