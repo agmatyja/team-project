@@ -49,6 +49,7 @@
           background-color: $primary;
         }
       }
+    }
 
     .buttons {
       display: flex;
@@ -123,5 +124,9 @@
       color: $white;
       border-color: $primary;
     }
+  }
+
+  .tns-controls {
+    display: none;
   }
 }
