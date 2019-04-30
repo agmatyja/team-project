@@ -21,6 +21,11 @@
   h3 {
     font-size: 12px;
   }
+
+  .btn-outline {
+    background-color: white;
+  }
+
   .btn-small {
     background-color: white;
     margin: 10px 5px;
@@ -53,7 +58,6 @@
 
   .outlines {
     display: inline-block;
-    margin-left: 10px;
   }
 
   .line {
@@ -85,40 +89,93 @@
     }
   }
 
-  .photo-lg {
-    background-image: url("/images/promotion/Sofa_small.jpg");
-    background-size: cover;
-    height: 300px;
+  .gallery {
+    .photo-lg {
+      background-image: url("/images/furniture/baby-chair-1.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 300px;
+    }
+
+    .tns-controls {
+      display: none;
+    }
+
+    .overview {
+      position: relative;
+
+      .controls {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        left: -20px;
+        width: 100%;
+        top: 30px;
+        transform: translatey(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 500;
+        pointer-events: none;
+
+        &:focus {
+          outline: none;
+        }
+
+        li {
+          pointer-events: auto;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .img-car {
+        margin: 0;
+        padding: 0;
+
+        .photo-sm {
+          height: 60px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: relative;
+          display: inline-block;
+        }
+      }
+    }
   }
 
-  .img-car {
-    margin: 0;
-    padding: 0;
-
-    .photo-sm {
-      height: 60px;
-      display: flex;
-      background-size: cover;
+  .socialmedia {
+    button {
+      background-color: white;
+      color: black;
     }
 
-    .photo {
-      background-image: url("/images/promotion/Sofa_small.jpg");
+    .facebook {
+      margin-left: 0;
+      background-color: #3b5998;
+      &:hover {
+        background-color: $primary;
+      }
+      color: white;
     }
 
-    .photo1 {
-      background-image: url("/images/promotion/bed_small.jpg");
+    .fa-google-plus-g {
+      color: #dd4b39;
     }
 
-    .photo2 {
-      background-image: url("/images/promotion/Sofa_small2.jpg");
+    .fa-twitter {
+      color: #1da1f2;
     }
 
-    .photo3 {
-      background-image: url("/images/promotion/Sofa_small.jpg");
+    .fa-pinterest-p {
+      color: #c8232c;
     }
-  }
 
-  .red {
-    color: red;
+    .fa-linkedin-in {
+      color: #0077b5;
+    }
   }
 }
