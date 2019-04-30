@@ -2,7 +2,7 @@
   <div class="container">
     <div class="product">
       <div class="container furn-car">
-        <div class="panel-bar">
+        <div>
           <div class="row">
             <div class="col-5 gallery">
               <div class="photo-lg"></div>
@@ -74,7 +74,7 @@
 
               <div class="line"></div>
 
-              <button class="btn-main-small">
+              <button class="btn-main-small add-to-cart">
                 <i class="fa fa-shopping-basket"></i> ADD TO CART
               </button>
 
@@ -87,15 +87,15 @@
               <div class="line"></div>
 
               <div class="outlines">
-                <p class="outlines">Quantity:</p>
-                <input class="quantity btn-small" type="text" min="0" max="99" />
-                <button class="quantity-plus btn-outline">+</button>
+                <label class="outlines">Quantity:</label>
+                <input class="quantity" type="text" min="0" max="99" />
                 <button class="quantity-minus btn-outline">-</button>
+                <button class="quantity-plus btn-outline">+</button>
               </div>
 
               <div class="line"></div>
 
-              <h2>Quick overview</h2>
+              <label>Quick overview</label>
               <p>
                 Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed
                 purus augue, eu euis mod tellus. Nam mattis eros tis sagittis.
@@ -104,8 +104,14 @@
 
               <div class="line"></div>
 
-              <p>Availability: In Stock</p>
-              <p>Category: Furniture</p>
+              <div class="row">
+                <label class="col-3">Availability:</label>
+                <div class="col-9">In Stock</div>
+              </div>
+              <div class="row">
+                <label class="col-3">Category:</label>
+                <div class="col-9">Furniture</div>
+              </div>
 
               <div class="line"></div>
 
