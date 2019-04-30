@@ -150,21 +150,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initFurnitureList();
   initQuantities();
   initStars();
-  const featuredBoxStars = document.querySelectorAll('.section--reviews .stars');
-  for (let k = 0; k < featuredBoxStars.length; k++) {
-    var box = featuredBoxStars[k];
-    for (let i = 0; i < box.children.length; i++) {
-      box.children[i].addEventListener('mousedown', function (e) {
-        var box2 = featuredBoxStars[k];
-        for (let j = 0; j <= i; j++) {
-          box2.children[j].className = 'fa fa-star selected';
-        }
-        for (let j = i + 1; j < box.children.length; j++) {
-          box2.children[j].className = 'fa fa-star';
-        }
-      });
-    }
-  }
 
   const selectCategory = document.getElementById('selectCategory');
   selectCategory.addEventListener('click', function (event) {
