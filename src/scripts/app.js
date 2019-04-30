@@ -45,7 +45,21 @@ document.addEventListener('DOMContentLoaded', function () {
     navContainer: '.slider-products-dots > ul'
   });
 
-
+  const featuredBoxStars = document.querySelectorAll('.section--reviews .stars');
+  for (let k = 0; k < featuredBoxStars.length; k++) {
+    var box = featuredBoxStars[k];
+    for (let i = 0; i < box.children.length; i++) {
+      box.children[i].addEventListener('mousedown', function (e) {
+        var box2 = featuredBoxStars[k];
+        for (let j = 0; j <= i; j++) {
+          box2.children[j].className = 'fa fa-star selected';
+        }
+        for (let j = i + 1; j < box.children.length; j++) {
+          box2.children[j].className = 'fa fa-star';
+        }
+      });
+    }
+  }
 
   const selectCategory = document.getElementById('selectCategory');
   selectCategory.addEventListener('click', function (event) {
@@ -68,7 +82,9 @@ document.addEventListener('DOMContentLoaded', function () {
         ) {
           brand.children[i - 1].classList.add('active');
           for (let j = 1; j < brand.children.length; j++) {
-            if (brand.children[brand.children.length - j].classList.value === 'active') {
+            if (
+              brand.children[brand.children.length - j].classList.value === 'active'
+            ) {
               brand.children[brand.children.length - j].classList.remove('active');
               break;
             }
@@ -153,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /// http://javascriptkit.com/javatutors/touchevents2.shtml
-  function swipedetect(el, callback) {
+  function swipedetect (el, callback) {
     let touchsurface = el;
     let swipedir;
     let startX;
@@ -168,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // maximum time allowed to travel that distance
     let elapsedTime;
     let startTime;
-    let handleswipe = callback || function (swipedir) { };
+    let handleswipe = callback || function (swipedir) {};
     touchsurface.addEventListener(
       'touchstart',
       function (e) {
@@ -228,7 +244,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-
   const feedbackBoxParent = document.querySelector(
     '.section--feedback .feedback-touch'
   );
@@ -266,69 +281,66 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-
-const productBoxStars = document.querySelectorAll('.product-box .stars');
-for (let k = 0; k < productBoxStars.length; k++) {
-  let memory;
-  let memoryClassList = [];
   const productBoxStars = document.querySelectorAll('.product-box .stars');
-
-  const productBoxStarsLoading = function (element, length, memoryArray) {
-    for (let i = 0; i < length; i++) {
-      memoryArray.push(element[i].classList.value);
-    }
-  };
-
-  const productBoxStarsRefresh = function (element, length, memoryArray) {
-    for (let i = 0; i < length; i++) {
-      element[i].classList = memoryArray[i];
-    }
-  };
-
-  const productBoxStarsAdd = function (element, indexStart, length) {
-    for (let i = indexStart; i <= length; i++) {
-      element[i].classList.add('full');
-      element[i].classList.add('active');
-    }
-  };
-
-  const productBoxStarsRemove = function (element, indexStart, length) {
-    for (let i = indexStart; i < length; i++) {
-      element[i].classList.remove('full');
-      element[i].classList.remove('active');
-    }
-  };
-
   for (let k = 0; k < productBoxStars.length; k++) {
-    let memory;
-    let memoryClassList = [];
-    const length = productBoxStars[k].children.length;
+    const productBoxStars = document.querySelectorAll('.product-box .stars');
 
-    productBoxStars[k].addEventListener('mouseenter', function (e) {
-      productBoxStarsLoading(productBoxStars[k].children, length, memoryClassList);
-    });
-
-    productBoxStars[k].addEventListener('mouseleave', function (e) {
-      if (memory == null) {
-        productBoxStarsRefresh(productBoxStars[k].children, length, memoryClassList);
+    const productBoxStarsLoading = function (element, length, memoryArray) {
+      for (let i = 0; i < length; i++) {
+        memoryArray.push(element[i].classList.value);
       }
-      memoryClassList = [];
-    });
+    };
 
-    for (let i = 0; i < length; i++) {
-      productBoxStars[k].children[i].addEventListener('click', function (e) {
-        memory = true;
+    const productBoxStarsRefresh = function (element, length, memoryArray) {
+      for (let i = 0; i < length; i++) {
+        element[i].classList = memoryArray[i];
+      }
+    };
+
+    const productBoxStarsAdd = function (element, indexStart, length) {
+      for (let i = indexStart; i <= length; i++) {
+        element[i].classList.add('full');
+        element[i].classList.add('active');
+      }
+    };
+
+    const productBoxStarsRemove = function (element, indexStart, length) {
+      for (let i = indexStart; i < length; i++) {
+        element[i].classList.remove('full');
+        element[i].classList.remove('active');
+      }
+    };
+
+    for (let k = 0; k < productBoxStars.length; k++) {
+      let memory;
+      let memoryClassList = [];
+      const length = productBoxStars[k].children.length;
+
+      productBoxStars[k].addEventListener('mouseenter', function (e) {
+        productBoxStarsLoading(productBoxStars[k].children, length, memoryClassList);
       });
 
-      productBoxStars[k].children[i].addEventListener('mouseenter', function (e) {
-        if (!memory) {
-          productBoxStarsRemove(productBoxStars[k].children, i, length);
-          productBoxStarsAdd(productBoxStars[k].children, 0, i);
+      productBoxStars[k].addEventListener('mouseleave', function (e) {
+        if (memory == null) {
+          productBoxStarsRefresh(productBoxStars[k].children, length, memoryClassList);
         }
+        memoryClassList = [];
       });
+
+      for (let i = 0; i < length; i++) {
+        productBoxStars[k].children[i].addEventListener('click', function (e) {
+          memory = true;
+        });
+
+        productBoxStars[k].children[i].addEventListener('mouseenter', function (e) {
+          if (!memory) {
+            productBoxStarsRemove(productBoxStars[k].children, i, length);
+            productBoxStarsAdd(productBoxStars[k].children, 0, i);
+          }
+        });
+      }
     }
   }
-}
 
   let feedbackLeft = function () {
     for (let i = 0; i < feedbackBox.length; i++) {

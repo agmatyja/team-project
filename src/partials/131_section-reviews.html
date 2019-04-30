@@ -1,7 +1,39 @@
 <div class="section--reviews">
   <div class="container">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <p>There are no reviews for this product.</p>
+    <h5 class="title">Add a review</h5>
+    <p class="title">Your rating</p>
+    <form>
+      <div>
+        <p class="opinion1">Bad</p>
+        <div class="stars">
+          <i class="fa fa-star selected"></i> <i class="fa fa-star selected"></i>
+          <i class="fa fa-star selected"></i> <i class="fa fa-star selected"></i>
+          <i class="fa fa-star selected"></i>
+        </div>
+        <p class="opinion2">Good</p>
+      </div>
+      <p class="title">Your review</p>
+      <div class="review">
+        <textarea name="Your review" placeholder="Here write your review:"></textarea>
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <input
+            type="text"
+            name="user-name"
+            placeholder="Name*"
+            id="name"
+            required="required"
+          />
+        </div>
+        <div class="col-5">
+          <input type="email" placeholder="Email*" id="email" required="required" />
+        </div>
+        <div class="col-2">
+          <button type="submit" class="btn-main">Continue</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
