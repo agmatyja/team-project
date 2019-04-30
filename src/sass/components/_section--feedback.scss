@@ -1,0 +1,57 @@
+.section--feedback {
+  justify-content: center;
+  padding-bottom: $section-bottom-space;
+
+  .box-feedback {
+    display: none;
+    .header {
+      i {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        font-size: 24px;
+      }
+    }
+
+    .opinion {
+      p {
+        font-size: 16px;
+        color: lighten($text-color, 30%);
+        text-align: center;
+        padding: 25px;
+        line-height: 50px;
+      }
+    }
+
+    .author {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .photo {
+        padding: 0 30px;
+        img {
+          height: 100px;
+          object-fit: fill;
+        }
+      }
+
+      .description {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h5 {
+          font-size: 16px;
+        }
+
+        p {
+          text-align: center;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .show {
+    display: block;
+  }
+}
