@@ -1,177 +1,356 @@
 .section--featured {
-  padding-top: 2rem;
+  padding: 5rem 0;
+  margin-bottom: -80px;
 
-  .featured-box {
+  .product {
     background-color: #ffffff;
-    position: relative;
-    display: inline-block;
-    visibility: hidden;
-
-    &.tns-slide-active {
-      visibility: visible;
-    }
+    border: 1px solid #e1e1e1;
+    height: 450px;
+    width: 290px;
 
     .photo {
-      max-height: 300px;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-    }
-  }
+      z-index: 10;
+      padding: 80% 10px 0 10px;
+      background: {
+        repeat: no-repeat;
+        size: cover;
+      }
+      &:hover {
+        .key {
+          display: flex;
+        }
+      }
+      height: 220px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      align-items: flex-end;
+      background-image: url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
 
-  .slider-featured {
-    .f1 {
-      background-image: url("/images/promotion/Sofa_small.jpg");
+      .dealspromo {
+        background-color: $form-border-color;
+        height: 40px;
+        width: 100%;
+        position: absolute;
+        color: #f4f5f7;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: -230px;
+        margin-left: -10px;
+        text-transform: uppercase;
+        font-size: 15px;
+        text-align: center;
+        padding: 10 0px;
+
+        h5 {
+          margin-left: 10px;
+          margin-top: 10px;
+          font-size: 16px;
+        }
+
+        .dots {
+          position: absolute;
+          color: $text-color;
+          background-color: $form-border-color;
+          display: inline-block;
+          width: 40%;
+          margin-left: 180px;
+          margin-top: 10px;
+
+          ul {
+            margin: 0;
+            padding: 0 0 0 1rem;
+            list-style: none;
+            background-color: $form-border-color;
+
+            li {
+              display: inline-block;
+              margin-left: 0.5rem;
+
+              a {
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 6px;
+                background-color: #f4f5f7;
+
+                &.active,
+                &:hover {
+                  background-color: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .key {
+        position: relative;
+        display: none;
+
+        .addcart {
+          position: relative;
+
+          .btn-main-small {
+            text-decoration: none;
+            margin: 0 60px;
+            margin-top: -150px;
+            position: absolute;
+            width: 160px;
+            height: 40px;
+            padding: 10px;
+            font-size: 15px;
+            color: #ffffff;
+            background-color: $form-border-color;
+            &:hover {
+              color: #ffffff;
+              background-color: $form-border-color;
+            }
+            i {
+              padding: 0 5px;
+            }
+          }
+        }
+
+        .time {
+          margin: 0 30px;
+          color: #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 20px;
+          &:hover {
+            display: flex;
+          }
+
+          a {
+            text-decoration: none;
+            border-radius: 50%;
+            background-color: $form-border-color;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: space-between;
+            position: relative;
+            margin-top: -120px;
+
+            p {
+              position: absolute;
+              top: 0;
+              left: 0;
+              color: #fff;
+              text-align: center;
+              font-size: 16px;
+              display: flex;
+              justify-content: center;
+              text-transform: uppercase;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
     }
 
-    .f2 {
-      background-image: url("/images/promotion/bed_small.jpg");
-    }
-
-    .f3 {
-      background-image: url("/images/promotion/Sofa_small2.jpg");
-    }
-
-    .time {
+    .content {
       text-align: center;
-      padding: 20px 0;
-    }
-  }
-
-  .slider-featured-1 {
-    .f1 {
-      background-image: url("/images/promotion/Sofa_small.jpg");
-    }
-
-    .f2 {
-      background-image: url("/images/promotion/bed_small.jpg");
-    }
-
-    .f3 {
-      background-image: url("/images/promotion/Sofa_small2.jpg");
-    }
-  }
-
-  .active {
-    color: #292929;
-  }
-
-  .dots {
-    border-radius: 50%;
-    color: $primary;
-  }
-
-  .description {
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 60%;
-    color: white;
-    font-weight: 800;
-    p {
-      display: block;
-    }
-  }
-
-  .slider-button {
-    display: inline-block;
-  }
-
-  .hero {
-    height: 280px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding-top: 80px;
-  }
-
-  .carousel-indicators {
-    color: #ffffff;
-    background-color: #000000;
-    width: 50%;
-    .active {
-      background-color: $primary;
-    }
-  }
-
-  .panel-bar {
-    margin: 0 10px;
-  }
-
-  .tns-nav-active > a {
-    background-color: #d58e32 !important;
-    color: #d58e32;
-  }
-
-  .prom-1-car {
-    .slider-featured-dots {
-      background: #000000;
-      z-index: 1000;
-      height: 24px;
-      border-radius: 0;
+      margin-top: 50px;
+      background-color: #ffffff;
+      width: 100%;
+      margin-bottom: 20px;
 
       h5 {
-        color: white;
-        float: left;
-        padding-left: 10px;
-        display: inline-block;
-      }
-
-      ul {
-        display: block;
-        float: right;
-        padding-right: 10px;
-        display: inline-block;
-        background: transparent;
-        transform: none;
-      }
-    }
-
-    .tns-controls {
-      display: none;
-    }
-
-    button {
-      visibility: hidden;
-    }
-  }
-
-  @media (max-width: 992px) {
-    .prom-1-car {
-      margin-bottom: 20px;
-    }
-  }
-
-  .prom-2-car {
-    .tns-nav {
-      display: none;
-    }
-
-    .tns-controls {
-      display: block;
-    }
-
-    .buttons {
-      display: flex;
-      button {
-        height: 20px;
-        background: black;
-        color: white;
-        text-align: center;
-        border: 1px solid white;
+        color: $primary;
+        font-size: 15px;
         line-height: 20px;
-        width: 50%;
-        &:hover {
-          background: $primary;
-          border-color: $primary;
+        letter-spacing: 1px;
+      }
+      .stars {
+        a {
+          text-decoration: none;
+          color: rgb(42, 42, 42);
+          @extend .far;
+          @extend .fa-star;
+          &.full {
+            @extend .fas;
+          }
+        }
+      }
+    }
+
+    .line {
+      margin: 0 10px;
+      border-bottom: 1px solid #2a2a2a;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 30px;
+        border-bottom: 4px solid $primary;
+        transform: translateX(-50%);
+      }
+    }
+
+    .actions {
+      .outlines {
+        margin-top: 40px;
+        height: 70px;
+        margin-left: 15px;
+        z-index: 15;
+
+        .outlinebtn {
+          display: inline-block;
+          padding: 7px;
+          border: 1px solid #2a2a2a;
+          color: #2a2a2a;
+          font-size: 20px;
+          line-height: 22px;
+          background-color: #ffffff;
+          width: 35px;
+          height: 35px;
+          &:hover {
+            background-color: $primary;
+            color: #ffffff;
+            border: 1px solid $primary;
+          }
+        }
+      }
+
+      .price {
+        margin-left: 190px;
+
+        .btn-main-small {
+          margin-top: -70px;
+          width: 75px;
+          height: 35px;
+          font-size: 14px;
+          text-align: center;
+          padding: 8 12px;
         }
       }
     }
   }
 
-  @media (max-width: 576px) {
-    .mobile {
-      display: none;
+  .productpromo {
+    margin-left: 300px;
+    margin-top: -450px;
+    padding-top: 15px;
+    height: 450px;
+    width: 100%;
+    position: relative;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+    }
+    background-image: url("https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+
+    .layerpromo {
+      background-color: $footer-bg;
+      background: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      width: 100%;
+      height: 250px;
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        color: #ffffff;
+        text-transform: uppercase;
+        flex: 0 1 auto;
+        align-self: auto;
+        margin-top: -40px;
+        font-size: 40x;
+        text-align: center;
+        font-weight: normal;
+      }
+
+      p {
+        align-self: center;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 20px;
+        flex: 0 1 auto;
+        align-self: auto;
+      }
+
+      .btn-main-small {
+        background-color: #ffffff;
+        height: 40px;
+        width: 150px;
+        flex: 0 1 auto;
+        align-self: auto;
+        margin-top: 50px;
+        margin-bottom: -125px;
+        color: $text-color;
+        text-transform: uppercase;
+        font-size: 16px;
+        border-radius: 8%;
+        padding: 8px;
+        text-align: center;
+        &:hover {
+          background-color: $primary;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .buttonnext {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: flex-end;
+      margin-top: 395px;
+
+      .leftbutton {
+        background-color: $form-border-color;
+        flex: 1;
+        border: 1px solid $form-border-color;
+        height: 30px;
+
+        &:hover {
+          background-color: $primary;
+          border: 1px solid $primary;
+        }
+
+        .icon {
+          i {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            padding-top: 5px;
+          }
+        }
+      }
+
+      .rightbutton {
+        background-color: $primary;
+        flex: 1;
+        border: 1px solid $primary;
+        height: 30px;
+
+        &:hover {
+          background-color: $primary;
+        }
+
+        .icon {
+          i {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            padding-top: 5px;
+          }
+        }
+      }
     }
   }
 }
