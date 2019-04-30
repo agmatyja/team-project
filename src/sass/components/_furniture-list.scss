@@ -87,27 +87,35 @@
 
   .photo-lg {
     background-image: url("/images/promotion/Sofa_small.jpg");
+    background-size: cover;
     height: 300px;
   }
 
-  .photo-sm {
-    height: 60px;
-  }
+  .img-car {
+    margin: 0;
+    padding: 0;
 
-  .photo {
-    background-image: url("/images/promotion/Sofa_small.jpg");
-  }
+    .photo-sm {
+      height: 60px;
+      display: flex;
+      background-size: cover;
+    }
 
-  .photo1 {
-    background-image: url("/images/promotion/bed_small.jpg");
-  }
+    .photo {
+      background-image: url("/images/promotion/Sofa_small.jpg");
+    }
 
-  .photo2 {
-    background-image: url("/images/promotion/Sofa_small2.jpg");
-  }
+    .photo1 {
+      background-image: url("/images/promotion/bed_small.jpg");
+    }
 
-  .photo3 {
-    background-image: url("/images/promotion/Sofa_small.jpg");
+    .photo2 {
+      background-image: url("/images/promotion/Sofa_small2.jpg");
+    }
+
+    .photo3 {
+      background-image: url("/images/promotion/Sofa_small.jpg");
+    }
   }
 
   .red {
