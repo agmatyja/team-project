@@ -45,6 +45,53 @@ document.addEventListener('DOMContentLoaded', function () {
     navContainer: '.slider-products-dots > ul'
   });
 
+  const quantities = document.querySelectorAll('.section--furniture-list .quantity');
+  const quantitiesPlus = document.querySelectorAll(
+    '.section--furniture-list .quantity-plus'
+  );
+  const quantitiesMinus = document.querySelectorAll(
+    '.section--furniture-list .quantity-minus'
+  );
+  for (let k = 0; k < quantities.length; k++) {
+    quantities[k].value = '0';
+
+    // number validation
+    [
+      'input',
+      'keydown',
+      'keyup',
+      'mousedown',
+      'mouseup',
+      'select',
+      'contextmenu',
+      'drop'
+    ].forEach(function (eventType) {
+      quantities[k].addEventListener(eventType, function () {
+        if (/^[0-9]{0,2}$/.test(this.value)) {
+          // two digits max
+          this.oldValue = this.value;
+          this.oldSelectionStart = this.selectionStart;
+          this.oldSelectionEnd = this.selectionEnd;
+        } else if (this.hasOwnProperty('oldValue')) {
+          this.value = this.oldValue;
+          this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+        }
+      });
+    });
+
+    quantitiesPlus[k].addEventListener('click', function () {
+      if (quantities[k].value < 99) {
+        quantities[k].value = Number(quantities[k].value) + 1;
+      }
+    });
+
+    quantitiesMinus[k].addEventListener('click', function () {
+      if (quantities[k].value > 0) {
+        quantities[k].value = Number(quantities[k].value) - 1;
+      }
+    });
+  }
+
   const featuredBoxStars = document.querySelectorAll('.section--furniture-list .stars');
   for (let k = 0; k < featuredBoxStars.length; k++) {
     var box = featuredBoxStars[k];
