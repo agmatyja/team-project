@@ -29,6 +29,23 @@
     }
   }
 
+  .icon {
+    color: black;
+    display: inline-block;
+  }
+
+  .icon:hover {
+    color: $primary;
+  }
+
+  .active {
+    color: $primary;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
   textarea {
     height: 160px;
     width: 100%;
