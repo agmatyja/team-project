@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   tns({
     items: 1,
     container: '.slider-featured',
-    navContainer: '.slider-featured-dots > ul',
+    navContainer: '.slider-featured-dots ul',
     mouseDrag: true,
     speed: 0,
     autoplay: true,
@@ -442,8 +442,6 @@ thumbPrev.addEventListener('click', function () {
 thumbNext.addEventListener('click', function () {
   thumbMoveRight(6);
 });
-
-console.log('hello');
 
 window.addEventListener('load', function () {
   const myTabs = document.getElementsByClassName('tab');
